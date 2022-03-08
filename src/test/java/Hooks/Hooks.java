@@ -17,7 +17,9 @@ public class Hooks {
 
     }
 
-    //
+
+
+
     public static RequestSpecification spec;
 
     @Before( value = "@ApiRegistrant")
@@ -28,13 +30,20 @@ public class Hooks {
 
     }
 
-
     @Before(order = 1, value = "@UIRegistration")
     public void navigateToRegistrationPage(){
 
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
 
     }
+
+    @Before(order = 1, value = "@UIHome")
+    public void navigateToHomePage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+
+    }
+
 
     @Before(order = 1, value = "@Appointment")
     public void navigateToLandingPage(){
