@@ -17,9 +17,6 @@ public class Hooks {
 
     }
 
-
-
-
     public static RequestSpecification spec;
 
     @Before( value = "@ApiRegistrant")
