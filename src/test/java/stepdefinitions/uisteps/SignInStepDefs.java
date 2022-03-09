@@ -16,11 +16,12 @@ public class SignInStepDefs {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
     }
 
-    @Given("user clicks on login dropdown")
+    @Given("user clicks on login dropdown icon")
     public void user_clicks_on_login_dropdown() {
         signInPage.loginDropdown.click();
     }
-    @Given("user clicks on sign in button")
+
+    @Given("user clicks on sign in dropdown")
     public void user_clicks_on_sign_in_button() {
         signInPage.signDropdown.click();
 
