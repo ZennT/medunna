@@ -16,7 +16,7 @@ public class RegistrationPage {
         public WebElement signinRegisterDropdown;
 
         @FindBy(xpath = "//*[text()='Register']")
-        public WebElement registerButton;
+        public WebElement registerHomeButton;
 
         @FindBy(xpath = "//*[text()='Registration']")
         public WebElement registrationText;
