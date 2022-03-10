@@ -14,10 +14,12 @@ public class DoctorStepDefs {
         Driver.waitAndSendText(signInPage.username, doctorUsername);
     }
 
+
     @And("user provides doctor password")
     public void doctorProvidesPassword() {
         String doctorPassword = "doctor";
         Driver.waitAndSendText(signInPage.password, doctorPassword);
     }
+    // new branch
 
 }
