@@ -32,7 +32,5 @@ public class DoctorStepDefs {
     // ozen
     //cetin
 
-
-    //Hello from Lokman
+//gi
 }
-
