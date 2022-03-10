@@ -97,6 +97,9 @@ public class RegistrationPage {
         @FindBy(xpath= "//*[@id='strengthBar']/li[contains(@style,'rgb(0, 255, 0)')]")
         public  WebElement passwordStrength4;
 
+
+
+
     }
 
 
