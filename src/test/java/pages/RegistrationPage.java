@@ -12,6 +12,12 @@ public class RegistrationPage {
             PageFactory.initElements(Driver.getDriver(), this);
         }
 
+        @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+        public WebElement signinRegisterDropdown;
+
+        @FindBy(xpath = "//*[text()='Register']")
+        public WebElement registerButton;
+
         @FindBy(xpath = "//*[text()='Registration']")
         public WebElement registrationText;
 
