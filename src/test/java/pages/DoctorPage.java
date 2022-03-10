@@ -15,13 +15,13 @@ public class DoctorPage {
     }
 
     @FindBy(id = "entity-menu")
-    public WebElement MyPagesDropDown;
+    public WebElement myPagesDropDown;
 
     @FindBy(xpath =  "(//*[contains(text(),'My Appointments')])[1]")
-    public WebElement MyAppointments;
+    public WebElement myAppointments;
 
     @FindBy(xpath = "//*[contains(text(),'Request Inpatient')]")
-    public WebElement RequestInpatient;
+    public WebElement requestInpatient;
 
     @FindBy(id = "fromDate")
     public WebElement fromDateBox;
