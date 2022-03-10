@@ -20,6 +20,7 @@ public class DoctorStepDefs {
         String doctorPassword = "doctor";
         Driver.waitAndSendText(signInPage.password, doctorPassword);
     }
+}
     // new branch
 
 
@@ -28,9 +29,3 @@ public class DoctorStepDefs {
 //unal
 
 
-
-    // ozen
-    //cetin
-
-//gi
-}
