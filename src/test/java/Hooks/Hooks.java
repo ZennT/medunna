@@ -41,6 +41,13 @@ public class Hooks {
 
     }
 
+    @Before(order = 1, value = "@UILogin")
+    public void navigateToLoginPage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+
+    }
+
 
     @Before(order = 1, value = "@Appointment")
     public void navigateToLandingPage(){
