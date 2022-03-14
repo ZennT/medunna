@@ -12,6 +12,12 @@ public class RegistrationPage {
             PageFactory.initElements(Driver.getDriver(), this);
         }
 
+        @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
+        public WebElement signinRegisterDropdown;
+
+        @FindBy(xpath = "//*[text()='Register']")
+        public WebElement registerHomeButton;
+
         @FindBy(xpath = "//*[text()='Registration']")
         public WebElement registrationText;
 
@@ -96,6 +102,8 @@ public class RegistrationPage {
 
         @FindBy(xpath= "//*[@id='strengthBar']/li[contains(@style,'rgb(0, 255, 0)')]")
         public  WebElement passwordStrength4;
+
+
 
 
 
