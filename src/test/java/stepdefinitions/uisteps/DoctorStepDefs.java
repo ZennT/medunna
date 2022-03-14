@@ -21,7 +21,7 @@ public class DoctorStepDefs {
         Driver.waitAndSendText(signInPage.password, doctorPassword);
     }
     // new branch
-
+//SOn
 
     // deneme  Murat Irmak
     //Ummu
