@@ -10,6 +10,8 @@ import org.openqa.selenium.TakesScreenshot;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
+import static utilities.DatabaseUtility.createConnection;
+
 public class Hooks {
     @Before
     public void setUp(){
@@ -17,6 +19,7 @@ public class Hooks {
 
     }
 
+    //
     public static RequestSpecification spec;
 
     @Before( value = "@ApiRegistrant")
@@ -27,6 +30,7 @@ public class Hooks {
 
     }
 
+
     @Before(order = 1, value = "@UIRegistration")
     public void navigateToRegistrationPage(){
 
@@ -34,10 +38,12 @@ public class Hooks {
 
     }
 
-    @Before(order = 1, value = "@UIHome")
-    public void navigateToHomePage(){
+    @Before( value = "@EndToEnd")
+    public void createNewDBConnection(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+        createConnection(ConfigurationReader.getProperty("db_credentials_url"),
+                ConfigurationReader.getProperty("db_username"),
+                ConfigurationReader.getProperty("db_password"));
 
     }
 
@@ -48,6 +54,28 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
 
     }
+
+    @Before(value = "@UIAppointment")
+    public void navigateToAppointmentPage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -60,8 +88,11 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-//        Driver.closeDriver();
 
+
+
+
+//        Driver.closeDriver
     }
 
 }
