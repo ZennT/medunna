@@ -57,6 +57,26 @@ public class Hooks {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @After
     public void tearDown(Scenario scenario){
 
@@ -66,8 +86,11 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-//        Driver.closeDriver();
 
+
+
+
+//        Driver.closeDriver
     }
 
 }
