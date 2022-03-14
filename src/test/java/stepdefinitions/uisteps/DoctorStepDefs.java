@@ -20,15 +20,20 @@ public class DoctorStepDefs {
         String doctorPassword = "doctor";
         Driver.waitAndSendText(signInPage.password, doctorPassword);
     }
+}
     // new branch
 
 
-    // last update
+    // deneme  Murat Irmak
     //Ummu
+//unal
 
 
+<<<<<<< HEAD
 
     // ozen
 
 
 }
+=======
+>>>>>>> origin/master
