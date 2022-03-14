@@ -9,7 +9,6 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    //    admin info:  username= admin79  password= admin
 
 
 
@@ -48,9 +47,5 @@ public class LoginPage {
 
 
 
-
-
-
-
-
 }
+

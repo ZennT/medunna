@@ -101,3 +101,5 @@ Feature: user login feature
     Examples: credentials
       |username |password  |
       |WadeLakin|cD5uV$#0#!|
+
+

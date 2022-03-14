@@ -18,6 +18,7 @@ public class SignInStepDefs {
 
     @Given("user clicks on login dropdown icon")
     public void user_clicks_on_login_dropdown() {
+
         signInPage.loginDropdown.click();
     }
 
