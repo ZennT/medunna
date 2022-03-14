@@ -17,7 +17,7 @@ import java.util.List;
 import static utilities.ReadTxt.getSSNIDs;
 import static utilities.WriteToTxt.saveRegistrantData;
 
-public class RegistrationStepDefs {
+public class US01_03_RegistrationStepDefs {
     Registrant registrant = new Registrant();
     RegistrationPage registrationPage = new RegistrationPage();
     Faker faker = new Faker();
@@ -280,4 +280,5 @@ public class RegistrationStepDefs {
    Assert.assertTrue(actualSSNIDs.contains(registrant.getSsn()));
 
     }
+
 }
