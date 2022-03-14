@@ -55,10 +55,12 @@ public class Hooks {
 
     }
 
+    @Before(value = "@UIAppointment")
+    public void navigateToAppointmentPage(){
 
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
 
-
-
+    }
 
 
 
