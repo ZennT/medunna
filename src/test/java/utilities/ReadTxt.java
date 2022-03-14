@@ -1,8 +1,10 @@
 package utilities;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
+
 public class ReadTxt {
 
 
@@ -12,8 +14,10 @@ public class ReadTxt {
 
 
         try{
+
             //identify file location
             FileReader fileReader = new FileReader(ConfigurationReader.getProperty("database_registrant_data"));
+
             //Read the records of the file in given location
             BufferedReader br = new BufferedReader(fileReader);
 
@@ -27,6 +31,10 @@ public class ReadTxt {
                 line = br.readLine();
 
             }
+
+
+
+
 
 
 

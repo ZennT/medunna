@@ -19,6 +19,7 @@ public class Hooks {
 
     }
 
+    //
     public static RequestSpecification spec;
 
     @Before( value = "@ApiRegistrant")
@@ -29,6 +30,7 @@ public class Hooks {
 
     }
 
+
     @Before(order = 1, value = "@UIRegistration")
     public void navigateToRegistrationPage(){
 
@@ -36,17 +38,12 @@ public class Hooks {
 
     }
 
-    @Before(order = 1, value = "@UIHome")
-    public void navigateToHomePage(){
+    @Before( value = "@EndToEnd")
+    public void createNewDBConnection(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
-
-    }
-
-    @Before(order = 1, value = "@UILogin")
-    public void navigateToLoginPage(){
-
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+        createConnection(ConfigurationReader.getProperty("db_credentials_url"),
+                ConfigurationReader.getProperty("db_username"),
+                ConfigurationReader.getProperty("db_password"));
 
     }
 
