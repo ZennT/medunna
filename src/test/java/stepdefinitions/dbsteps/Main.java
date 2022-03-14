@@ -15,6 +15,6 @@ public class Main {
         String [] data = value.split(value);
 
         return data;
-
+// ozen
     }
 }
