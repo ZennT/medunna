@@ -5,15 +5,15 @@ import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.RegistrationPage;
-import pages.UserSettingPage;
+import pages.US06_UserSettingPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class UserSettingStepDefs {
-    UserSettingPage userSettingPage=new UserSettingPage();
+public class US06_UserSettingStepDefs {
+    US06_UserSettingPage userSettingPage=new US06_UserSettingPage();
     RegistrationPage registrationPage=new RegistrationPage();
     @Given("user on the Medunna Sign in  Page")
     public void user_on_the_medunna_sign_in_page() {

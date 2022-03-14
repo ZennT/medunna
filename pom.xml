@@ -15,12 +15,6 @@
 
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/ch.bfh.due1/time-slot -->
-        <dependency>
-            <groupId>ch.bfh.due1</groupId>
-            <artifactId>time-slot</artifactId>
-            <version>1.1</version>
-        </dependency>
 
 
 

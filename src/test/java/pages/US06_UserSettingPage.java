@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class UserSettingPage {
-    public UserSettingPage() {
+public class US06_UserSettingPage {
+    public US06_UserSettingPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(id = "username")

@@ -1,5 +1,4 @@
 package pages;
-import org.apache.xmlbeans.impl.xb.xsdschema.FieldDocument;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,8 +6,8 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class ValidateAppointmentPage {
-    public ValidateAppointmentPage() {
+public class US10_ValidateAppointmentPage {
+    public US10_ValidateAppointmentPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(id = "username")

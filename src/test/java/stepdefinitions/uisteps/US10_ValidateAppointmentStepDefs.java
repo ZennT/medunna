@@ -3,22 +3,14 @@ package stepdefinitions.uisteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import pages.ValidateAppointmentPage;
-import pojos.Appointment;
+import pages.US10_ValidateAppointmentPage;
 import pojos.TimeSlots;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-
-public class ValidateAppointmentStepDefs {
-    ValidateAppointmentPage validateAppointmentPage=new ValidateAppointmentPage();
+public class US10_ValidateAppointmentStepDefs {
+    US10_ValidateAppointmentPage validateAppointmentPage=new US10_ValidateAppointmentPage();
     TimeSlots timeSlots=new TimeSlots();
 
     @Given("doctor go to on the Medunna Sign in  Page")
