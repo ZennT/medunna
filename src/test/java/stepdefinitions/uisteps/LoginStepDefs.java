@@ -1,6 +1,7 @@
 package stepdefinitions.uisteps;
 
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -18,6 +19,18 @@ public class LoginStepDefs {
     LoginPage loginPage = new LoginPage();
     SignInPage signinpage=new SignInPage();
 
+    @Given("user is on the login page")
+    public void user_is_on_the_login_page() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+    }
+    @Given("user clicks on login dropdown icon")
+    public void user_clicks_on_login_dropdown_icon() {
+        signinpage.loginDropdown.click();
+    }
+    @Given("user clicks on sign in dropdown")
+    public void user_clicks_on_sign_in_dropdown() {
+        signinpage.signDropdown.click();
+    }
 
     @Given("user sends username {string}")
     public void user_sends_username(String dropdown) {
