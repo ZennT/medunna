@@ -54,12 +54,29 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
 
     }
-    @Before( value = "@EndToEnd")
-    public void createNewDBConnection(){
-        createConnection(ConfigurationReader.getProperty("db_credentials_url"),
-                ConfigurationReader.getProperty("db_username"),
-                ConfigurationReader.getProperty("db_password"));
+
+    @Before(value = "@UIAppointment")
+    public void navigateToAppointmentPage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @After
@@ -71,8 +88,11 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-//        Driver.closeDriver();
 
+
+
+
+//        Driver.closeDriver
     }
 
 }
