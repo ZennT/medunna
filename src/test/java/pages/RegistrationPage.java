@@ -4,12 +4,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
-
+// deneme
 
 public class RegistrationPage {
         public RegistrationPage() {
 
-            PageFactory.initElements(Driver.getDriver(), this);
+                PageFactory.initElements(Driver.getDriver(), this);
         }
 
         @FindBy(xpath = "//a[@class='d-flex align-items-center dropdown-toggle nav-link']")
@@ -107,7 +107,13 @@ public class RegistrationPage {
 
 
 
-    }
+}
+
+
+
+
+
+
 
 
 
