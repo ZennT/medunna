@@ -28,5 +28,8 @@ public class    SignInPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
+    @FindBy(id = "rememberMe")
+    public WebElement rememberMe;
+
 
 }
