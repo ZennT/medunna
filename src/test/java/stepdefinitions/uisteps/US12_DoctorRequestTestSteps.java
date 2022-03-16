@@ -4,12 +4,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import pages.DoctorRequestTestPage;
+import pages.US12_DoctorRequestTestPage;
 import utilities.Driver;
 
 public class US12_DoctorRequestTestSteps {
 
-    DoctorRequestTestPage doctorRequestTestPage = new DoctorRequestTestPage();
+    US12_DoctorRequestTestPage doctorRequestTestPage = new US12_DoctorRequestTestPage();
 
 
 
@@ -25,19 +25,19 @@ public class US12_DoctorRequestTestSteps {
         Driver.waitAndClick(doctorRequestTestPage.signInButton1);
     }
 
-    @And("doctor provides username")
-    public void doctorProvidesUsername() {
-        String doctorUsername = "doctor79";
-        Driver.waitAndSendText(doctorRequestTestPage.username, doctorUsername);
-    }
-
-    @And("doctor provides password")
-    public void doctorProvidesPassword() {
-        String doctorPassword = "doctor";
-
-        Driver.waitAndSendText(doctorRequestTestPage.password, doctorPassword);
-    }
-
+//    @And("doctor provides username")
+//    public void doctorProvidesUsername() {
+//        String doctorUsername = "doctor79";
+//        Driver.waitAndSendText(doctorRequestTestPage.username, doctorUsername);
+//    }
+//
+//    @And("doctor provides password")
+//    public void doctorProvidesPassword() {
+//        String doctorPassword = "doctor";
+//
+//        Driver.waitAndSendText(doctorRequestTestPage.password, doctorPassword);
+//    }
+//
     @Then("doctor clicks on  sign in button")
     public void doctorClicksOnSignInButton() {
         Driver.waitAndClick(doctorRequestTestPage.signInButton2);
@@ -65,10 +65,10 @@ public class US12_DoctorRequestTestSteps {
 
     @And("doctor navigates to Test Items page and verifies the page")
     public void doctorNavigatesToTestItemsPageAndVerifiesThePage() {
+        Driver.wait(3);
         boolean text = doctorRequestTestPage.textOfTestItems.isDisplayed();
         Assert.assertTrue(text);
-        String yazi = doctorRequestTestPage.textOfTestItems.getText();
-        System.out.println(yazi);
+
     }
 
     @Then("doctor clicks on Urea checkbox to check")
