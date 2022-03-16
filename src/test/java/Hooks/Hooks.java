@@ -55,6 +55,28 @@ public class Hooks {
 
     }
 
+    @Before(value = "@UIAppointment")
+    public void navigateToAppointmentPage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @After
@@ -66,8 +88,28 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-//        Driver.closeDriver();
 
+
+
+
+//        Driver.closeDriver
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
