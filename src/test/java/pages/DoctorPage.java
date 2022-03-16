@@ -32,7 +32,7 @@ public class DoctorPage {
     @FindBy(xpath = "//div[@class='btn-group flex-btn-group-container']")
     public List<WebElement> editList;
 
-    @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[1]")
+    @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[3]")
     public WebElement  edit1;
 
 }

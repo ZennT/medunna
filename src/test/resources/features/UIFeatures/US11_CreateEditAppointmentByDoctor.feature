@@ -15,3 +15,4 @@ Feature: Update appointment by doctor
     And Doctor selects status as Pending from dropdown
     And Doctor fills in required fields, anemnesis, treatment, diagnosis
     Then Doctor clicks on Save button
+    Then Doctor verifies appointment saved successfully

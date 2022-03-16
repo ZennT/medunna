@@ -9,6 +9,8 @@ import pages.US11_CreateEditAppointmentByDoctor;
 import utilities.Driver;
 
 public class US11_CreateEditAppointmentByDoctorStepDefs {
+
+
     SignInPage signInPage = new SignInPage();
     DoctorPage doctorPage = new DoctorPage();
     US11_CreateEditAppointmentByDoctor createEditAppointmentByDoctor = new US11_CreateEditAppointmentByDoctor();
@@ -47,20 +49,53 @@ public class US11_CreateEditAppointmentByDoctorStepDefs {
 
     @And("Doctor verifies patient's info id, start and end date, status, physician and patient are present")
     public void doctorVerifiesPatientSInfoIdStartAndEndDateStatusPhysicianAndPatientArePresent() {
+        /*
+    ID 28371
+    StartDateTime 03/15/2022 12:00 AM
+    EndDateTime   03/16/2022 12:00 AM
+    Status COMPLETED
+    Physician  10512:doctor79 su :ALLERGY IMMUNOLOGY
+    Patient :ali can
+     */
 
+        Driver.wait(5);
         Assert.assertTrue(createEditAppointmentByDoctor.idField.isDisplayed());
+        Driver.wait(2);
+        Assert.assertTrue(createEditAppointmentByDoctor.startDateTime.isDisplayed());
+        Driver.wait(2);
+        Assert.assertTrue(createEditAppointmentByDoctor.endDateTime.isDisplayed());
+        Driver.wait(2);
+        Assert.assertTrue(createEditAppointmentByDoctor.physicianField.isDisplayed());
+        Driver.wait(2);
+        Assert.assertTrue(createEditAppointmentByDoctor.patientField.isDisplayed());
 
     }
 
     @And("Doctor selects status as Pending from dropdown")
     public void doctorSelectsStatusAsPendingFromDropdown() {
+//        Driver.selectAnItemFromDropdown(createEditAppointmentByDoctor.statusDropDown,"PENDING");
+        Assert.assertTrue(createEditAppointmentByDoctor.statusDropDown.isDisplayed());
     }
 
     @And("Doctor fills in required fields, anemnesis, treatment, diagnosis")
     public void doctorFillsInRequiredFieldsAnemnesisTreatmentDiagnosis() {
+        createEditAppointmentByDoctor.anamnesisField.clear();
+        Driver.waitAndSendText(createEditAppointmentByDoctor.anamnesisField,"this is a test ");
+        createEditAppointmentByDoctor.treatmentField.clear();
+        Driver.waitAndSendText(createEditAppointmentByDoctor.treatmentField,"this is a test");
+        createEditAppointmentByDoctor.diagnosisField.clear();
+        Driver.waitAndSendText(createEditAppointmentByDoctor.diagnosisField,"this is a test");
+
     }
 
     @Then("Doctor clicks on Save button")
     public void doctorClicksOnSaveButton() {
+        Driver.waitAndClick(createEditAppointmentByDoctor.saveButton);
+    }
+
+    @Then("Doctor verifies appointment saved successfully")
+    public void doctorVerifiesAppointmentSavedSuccessfully() {
+        Driver.wait(2);
+        Assert.assertTrue(createEditAppointmentByDoctor.appointmentSavedMessage.isDisplayed());
     }
 }

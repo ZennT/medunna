@@ -13,9 +13,6 @@ public class US11_CreateEditAppointmentByDoctor {
     }
 
 
-//    @FindBy(xpath = "//*[@name='id']")
-//    public WebElement idField;
-
     @FindBy(xpath = "//*[@id='appointment-id']")
     public WebElement idField;
 
@@ -54,5 +51,8 @@ public class US11_CreateEditAppointmentByDoctor {
 
     @FindBy(xpath = "//span[text()='Back']")
     public WebElement backButton;
+
+    @FindBy(xpath = "//*[@id='root']/div/div/div[1]/div/div/div[1]")
+    public WebElement appointmentSavedMessage;
 
 }
