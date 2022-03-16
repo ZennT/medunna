@@ -1,3 +1,4 @@
+@UIAppointment
 Feature: test of doctor request test
 
 

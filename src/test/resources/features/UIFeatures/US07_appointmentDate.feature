@@ -1,3 +1,4 @@
+@UIAppointment
 Feature: appointment date test
 
   @Appointment_Date
