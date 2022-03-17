@@ -117,7 +117,7 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
 
     @And("user should see Your username is invalid. text visible and verifies")
     public void userShouldSeeYourUsernameIsInvalidTextVisibleAndVerifies() {
-        Assert.assertTrue(registrationPage.invalidUserNametext.isDisplayed());
+        Assert.assertTrue(registrationPage.invalidThisFieldIsText.isDisplayed());
     }
 
 
