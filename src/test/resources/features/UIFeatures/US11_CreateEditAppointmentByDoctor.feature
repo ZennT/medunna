@@ -11,17 +11,6 @@ Background: common steps
   And Doctor clicks on Edit button
   Then doctor selects appointment date from datefrom and dateto
 
-
-  Scenario:Update My Appointments by doctor
-
-    Given Doctor verifies patient's info id, start and end date, status, physician and patient are present
-    And Doctor fills in required fields, anemnesis, treatment, diagnosis
-    Then Doctor clicks on Save button
-    Then Doctor verifies appointment saved successfully
-    Then Doctor clicks on Sign out button
-
-
-
   Scenario:Update My Appointments by doctor
 
     Given Doctor verifies patient's info id, start and end date, status, physician and patient are present
