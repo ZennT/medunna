@@ -33,16 +33,16 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
     }
 
 
-    @And("user clicks on sign in register dropdown")
-    public void userClicksOnSignInRegisterDropdown() {
-       Driver.waitAndClick(signInPage.loginDropdown);
-    }
+//    @And("user clicks on sign in register dropdown")
+//    public void userClicksOnSignInRegisterDropdown() {
+//       Driver.waitAndClick(signInPage.loginDropdown);
+//    }
 
-    @And("user clicks on Register button")
-    public void userClicksOnRegisterButton() {
-        Driver.waitAndClick(signInPage.registerButton);
-
-    }
+//    @And("user clicks on Register button")
+//    public void userClicksOnRegisterButton() {
+//        Driver.waitAndClick(signInPage.registerButton);
+//
+//    }
 
     @And("user is on registration page and verifies")
     public void userIsOnRegistrationPageAndVerifies() {
@@ -51,57 +51,57 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
     }
 
 
-    @Given("user provides ssn {string}")
-    public void user_provides_ssn_id(String ssn) {
-        ssn = faker.idNumber().ssnValid();
-        registrant.setSsn(ssn);
-        Driver.waitAndSendText(registrationPage.ssnTextbox,ssn);
+//    @Given("user provides ssn {string}")
+//    public void user_provides_ssn_id(String ssn) {
+//        ssn = faker.idNumber().ssnValid();
+//        registrant.setSsn(ssn);
+//        Driver.waitAndSendText(registrationPage.ssnTextbox,ssn);
+//
+//    }
+//    @Then("user provides firstname and lastname {string} and {string}")
+//    public void user_provides_firstname_and_lastname_and(String firstname, String lastname) {
+//        firstname =faker.name().firstName();
+//        lastname = faker.name().lastName();
+//
+//        registrant.setFirstName(firstname);
+//        registrant.setLastName(lastname);
+//        Driver.waitAndSendText(registrationPage.firstNameTextBox,firstname);
+//        Driver.waitAndSendText(registrationPage.lastNameTextBox,lastname);
+//
+//    }
+//    @Then("user provides username {string}")
+//    public void user_creates_username(String username) {
+//        username=faker.name().username();
+//        registrant.setUserName(username);
+//        Driver.waitAndSendText(registrationPage.usernameTextBox,username);
+//    }
+//    @Then("user provides email {string}")
+//    public void user_provides_also_email(String email) {
+//        email =faker.internet().emailAddress();
+//        registrant.setUserName(email);
+//        Driver.waitAndSendText(registrationPage.emailTextBox,email);
+//
+//
+//    }
+//    @Then("user provides {string}")
+//    public void user_generates_the_password(String password) {
+//      password =faker.internet().password(8,20,true,true);
+//        registrant.setPassword(password);
+//
+//      Driver.waitAndSendText(registrationPage.newPasswordTextBox, password);
+//      Driver.waitAndSendText(registrationPage.newPasswordConfirmRequiredText,password);
+//    }
+//    @Then("user registers and validates")
+//    public void user_registers_and_validates() {
+//        Driver.waitAndClick(registrationPage.registerButton);
+//        Assert.assertTrue(Driver.waitForVisibility(registrationPage.successMessageToastContainer,2).isDisplayed());
+//    }
 
-    }
-    @Then("user provides firstname and lastname {string} and {string}")
-    public void user_provides_firstname_and_lastname_and(String firstname, String lastname) {
-        firstname =faker.name().firstName();
-        lastname = faker.name().lastName();
-
-        registrant.setFirstName(firstname);
-        registrant.setLastName(lastname);
-        Driver.waitAndSendText(registrationPage.firstNameTextBox,firstname);
-        Driver.waitAndSendText(registrationPage.lastNameTextBox,lastname);
-
-    }
-    @Then("user provides username {string}")
-    public void user_creates_username(String username) {
-        username=faker.name().username();
-        registrant.setUserName(username);
-        Driver.waitAndSendText(registrationPage.usernameTextBox,username);
-    }
-    @Then("user provides email {string}")
-    public void user_provides_also_email(String email) {
-        email =faker.internet().emailAddress();
-        registrant.setUserName(email);
-        Driver.waitAndSendText(registrationPage.emailTextBox,email);
-
-
-    }
-    @Then("user provides {string}")
-    public void user_generates_the_password(String password) {
-      password =faker.internet().password(8,20,true,true);
-        registrant.setPassword(password);
-
-      Driver.waitAndSendText(registrationPage.newPasswordTextBox, password);
-      Driver.waitAndSendText(registrationPage.newPasswordConfirmRequiredText,password);
-    }
-    @Then("user registers and validates")
-    public void user_registers_and_validates() {
-        Driver.waitAndClick(registrationPage.registerButton);
-        Assert.assertTrue(Driver.waitForVisibility(registrationPage.successMessageToastContainer,2).isDisplayed());
-    }
-
-    @Then("user creates the records to a correspondent file")
-    public void user_creates_the_records_to_a_correspondent_file() {
-
-        saveRegistrantData(registrant);
-    }
+//    @Then("user creates the records to a correspondent file")
+//    public void user_creates_the_records_to_a_correspondent_file() {
+//
+//        saveRegistrantData(registrant);
+//    }
 
 
 
@@ -122,10 +122,10 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
 
 
 
-    @Then("capture the screenshot")
-    public void capture_the_screenshot() throws IOException {
-        ReusableMethods.getScreenshot("ScreenShoots");
-    }
+//    @Then("capture the screenshot")
+//    public void capture_the_screenshot() throws IOException {
+//        ReusableMethods.getScreenshot("ScreenShoots");
+//    }
 
     @Then("close the application")
     public void close_the_application() {

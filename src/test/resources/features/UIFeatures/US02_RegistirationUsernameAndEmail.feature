@@ -3,51 +3,51 @@ Feature: registration feature
 
   Background: user is on the registration page
     Given user is on homepage
-    And user clicks on sign in register dropdown
-    And user clicks on Register button
+    Given user clicks sign in register dropdown button
+    And user clicks register button
     And user is on registration page and verifies
 
 
   @UIRegistration_US002_TC0001_TC0006
   Scenario Outline: positive testing with all valid credentials
-    And user provides ssn "<SSN>"
+    And user provides ssn id "<ssn>"
     Then user provides firstname and lastname "<firstname>" and "<lastname>"
     And user provides username "<username>"
     And user provides email "<email>"
-    And user provides "<password>"
-    And user registers and validates
-    Then user creates the records to a correspondent file
+    And user provides the password "<password>"
+    And user registers and validates data generation
+    Then user sets the data in correspondent files
     Examples:
-      | SSN         | firstname | lastname | username    | email           | password   |
+      | ssn         | firstname | lastname | username    | email           | password   |
       | 170-98-8790 | New User  | last     | hel.ly_can1 | molly6@gmail.com | mollyA123. |
 
   @UIRegistration_US002_TC0005 @smoke
   Scenario Outline: user should not able register with Username that already used
-    And user provides ssn "<SSN>"
+    And user provides ssn id "<ssn>"
     Then user provides firstname and lastname "<firstname>" and "<lastname>"
     And user provides username that already used "<username>"
     And user provides email "<email>"
-    And user provides "<password>"
+    And user provides the password "<password>"
     And user verifies that username already used
     Then capture the screenshot
-    Then user creates the records to a correspondent file
+    Then user sets the data in correspondent files
     Examples:
-      | SSN         | firstname | lastname | username    | email         | password |
+      | ssn         | firstname | lastname | username    | email         | password |
       | 387-98-8790 | New       | name     | hel.ly_can1 | mol@gmail.com | newA123. |
 
 
   @UIRegistration_US002_TC_0011
   Scenario Outline: user should not able register with Email that already used
-    And user provides ssn "<SSN>"
+    And user provides ssn id "<ssn>"
     Then user provides firstname and lastname "<firstname>" and "<lastname>"
     And user provides username "<username>"
     And user provides already used email "<email>"
-    And user provides "<password>"
+    And user provides the password "<password>"
     And user verifies that email already used
     Then capture the screenshot
-    Then user creates the records to a correspondent file
+    Then user sets the data in correspondent files
     Examples:
-      | SSN         | firstname | lastname | username       | email            | password |
+      | ssn         | firstname | lastname | username       | email            | password |
       | 387-98-8790 | Newt      | nameff   | hello.ly5_can1 | molly6@gmail.com | nttA123. |
 
 
