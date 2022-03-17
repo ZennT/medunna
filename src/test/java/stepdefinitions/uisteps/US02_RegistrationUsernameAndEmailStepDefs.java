@@ -71,9 +71,6 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
     }
     @Then("user provides username {string}")
     public void user_creates_username(String username) {
-//        username = registrantpojo.getFirstName() + registrantpojo.getLastName(); // burada ikisini birlestirdik firstname and lastname
-//        registrantpojo.setUserName(username);                                        usernamei olustirduk
-
         username=faker.name().username();
         registrant.setUserName(username);
         Driver.waitAndSendText(registrationPage.usernameTextBox,username);
