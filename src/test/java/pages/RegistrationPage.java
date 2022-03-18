@@ -54,7 +54,6 @@ public class RegistrationPage {
         @FindBy(id = "email")
         public WebElement emailTextBox;
 
-
         @FindBy(id = "firstPassword")
         public WebElement newPasswordTextBox;
 
