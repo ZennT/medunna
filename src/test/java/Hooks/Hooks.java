@@ -22,7 +22,7 @@ public class Hooks {
     //
     public static RequestSpecification spec;
 
-    @Before( value = "@ApiRegistrant")
+    @Before( value = "@PatientInfoApi")
     public void setup(){
 
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
