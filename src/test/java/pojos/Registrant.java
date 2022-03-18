@@ -105,6 +105,13 @@ public class Registrant {
         this.email = email;
     }
 
+
+
+
+
+
+
+
     @Override
     public String toString() {
         return "Registrant{" +
