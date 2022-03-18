@@ -62,6 +62,13 @@ public class Hooks {
 
     }
 
+    @Before(value = "@UIHome")
+    public void navigateToHomePage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+
+    }
+
 
 
 
