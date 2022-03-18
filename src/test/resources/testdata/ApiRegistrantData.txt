@@ -1,0 +1,1 @@
+Registrant{firstName='Shayla', lastName='Little', ssn='766-16-3955', login='ShaylaLittle', langKey='null', password='NF%B3crL4r$4pp', email='gayle.grant@gmail.com'}
