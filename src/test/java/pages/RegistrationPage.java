@@ -105,7 +105,8 @@ public class RegistrationPage {
         @FindBy(xpath = "//*[contains(text(), 'Your email is required.')]")
         public WebElement requiredEmailText;
 
-
+        @FindBy(xpath = "//*[contains(text(), 'Your username is invalid.')]")
+        public WebElement invalidUserNameText;
 
 
 

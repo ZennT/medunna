@@ -113,11 +113,13 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
     public void userProvidesSpaceInUsername() {
         registrationPage.usernameTextBox.sendKeys("molly-19 me");
         registrationPage.usernameTextBox.sendKeys(Keys.ENTER);
+
 }
 
     @And("user should see Your username is invalid. text visible and verifies")
     public void userShouldSeeYourUsernameIsInvalidTextVisibleAndVerifies() {
-        Assert.assertTrue(registrationPage.invalidThisFieldIsText.isDisplayed());
+        Driver.wait(1);
+        Assert.assertTrue(registrationPage.invalidUserNameText.isDisplayed());
     }
 
 
