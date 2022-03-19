@@ -45,6 +45,7 @@ public class DoctorPage {
 
     @FindBy (xpath = "//a[@href='/logout']")
     public WebElement signOut;
-
+    @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[2]")
+    public WebElement  edit2;
 
 }
