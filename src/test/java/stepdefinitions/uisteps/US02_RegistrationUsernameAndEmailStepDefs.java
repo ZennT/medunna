@@ -33,10 +33,10 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
     }
 
 
-//    @And("user clicks on sign in register dropdown")
-//    public void userClicksOnSignInRegisterDropdown() {
-//       Driver.waitAndClick(signInPage.loginDropdown);
-//    }
+    @And("user clicks on sign in register dropdown")
+    public void userClicksOnSignInRegisterDropdown() {
+       Driver.waitAndClick(signInPage.loginDropdown);
+    }
 
 //    @And("user clicks on Register button")
 //    public void userClicksOnRegisterButton() {

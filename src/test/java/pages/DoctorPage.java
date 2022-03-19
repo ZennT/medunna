@@ -45,9 +45,20 @@ public class DoctorPage {
 
     @FindBy (xpath = "//a[@href='/logout']")
     public WebElement signOut;
+    @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[2]")
+    public WebElement  edit2;
 
+    @FindBy(xpath = "//*[contains(text(),'Show Test Results')]")
+    public WebElement showTestResult;
 
+    @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[1]")
+    public WebElement viewResult1;
 
+    @FindBy(xpath = "//table/thead/tr")
+    public List<WebElement> viewTestResultHeaderList;
+
+    @FindBy(xpath = "//*[text()='InPatient request already done for this appointment']")
+    public WebElement requestAlreadyDoneMessageToastContainer;
 
 
 
