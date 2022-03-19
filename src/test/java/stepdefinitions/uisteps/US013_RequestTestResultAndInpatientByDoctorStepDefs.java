@@ -22,21 +22,21 @@ public class US013_RequestTestResultAndInpatientByDoctorStepDefs {
     SignInPage signInPage= new SignInPage();
 
 
-    @And("user clicks on sign in dropdown")
-    public void userClicksOnSignInDropdown() {
+
+    @And("user clicks on SIGNin dropdown")
+    public void userClicksOnSIGNinDropdown() {
+//        Driver.wait();
         Driver.waitAndClick(signInPage.signDropdown);
     }
 
     @And("Doctor clicks on sign in button")
     public void Doctor_clicks_on_sign_button() {
-     Driver.waitAndClick(signInPage.loginDropdown);
+     Driver.waitAndClick(signInPage.loginButton);
 
     }
 
     @Given("Doctor provide valid {string} and {string}")
     public void doctor_provide_valid_and(String username, String password) {
-//        signInPage.username.sendKeys(username);
-//        signInPage.password.sendKeys(password);
         Driver.waitAndSendText(signInPage.username,username);
         Driver.waitAndSendText(signInPage.password,password);
     }
@@ -45,7 +45,7 @@ public class US013_RequestTestResultAndInpatientByDoctorStepDefs {
     @And("Doctor clicks on My Pages dropdown")
     public void doctorClicksOnMyPagesDropdown() {
         Driver.waitAndClick(doctorPage.myPagesDropDown);
-      //  doctorPage.myPagesDropDown.click();
+
     }
 
     @And("Doctor clicks on My Appointments")
@@ -59,10 +59,6 @@ public class US013_RequestTestResultAndInpatientByDoctorStepDefs {
         Driver.waitAndSendText(doctorPage.toDate, dateTo);
         Driver.waitAndSendText(doctorPage.fromDate, dateFrom);
         Driver.wait(3);
-
-        // From sending direct data
-//        Driver.waitAndSendText(doctorPage.fromDate,"03-10-2022");  //03-05-2022
-//        Driver.waitAndSendText(doctorPage.toDate, "03-23-2022");   //03-15-2022
     }
 
     @And("Doctor clicks on Edit button for patient")
@@ -81,14 +77,12 @@ public class US013_RequestTestResultAndInpatientByDoctorStepDefs {
     }
 
 
-
     @Then("Doctor clicks on View Result button")
     public void doctorClicksOnViewResultButton() {
         Driver.waitAndClick(doctorPage.viewResult1);
         Driver.wait(3);
 
     }
-
 
 
     @Then("Doctor should see and verify all test information")

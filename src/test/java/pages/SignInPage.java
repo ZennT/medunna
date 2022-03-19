@@ -12,7 +12,6 @@ public class    SignInPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
     @FindBy(id = "account-menu")
     public WebElement loginDropdown;
 

@@ -3,7 +3,7 @@ Feature: Test results and Inpatient feature
   Background: User is on the homepage for sign in as an Doctor
     Given user is on homepage
     And user clicks on sign in register dropdown
-    And user clicks on sign in dropdown
+    And user clicks on SIGNin dropdown
 
   @US_0013TC_0001
   Scenario Outline: Doctor should able to see Test Results
