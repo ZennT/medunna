@@ -47,4 +47,15 @@ public class DoctorPage {
     public WebElement signOut;
 
 
+
+
+
+
+
+
+
+
+
+
+
 }
