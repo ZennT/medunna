@@ -48,4 +48,15 @@ public class DoctorPage {
     @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[2]")
     public WebElement  edit2;
 
+
+
+
+
+
+
+
+
+
+
+
 }
