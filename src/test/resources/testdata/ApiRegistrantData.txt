@@ -1,0 +1,8 @@
+Registrant{firstName='Lincoln', lastName='Feil', ssn='590-50-3928', login='null', langKey='null', password='$X!*8oYtvyl@', email='maisie.treutel@hotmail.com'}
+Registrant{firstName='Trudi', lastName='Mueller', ssn='574-11-7874', login='TrudiMueller', langKey='null', password='ZJ06&#24rPUka8Q!Gv0', email='null'}
+Registrant{firstName='Zana', lastName='Dietrich', ssn='410-14-5446', login='ZanaDietrich', langKey='null', password='F%82!*ti8H$Y6', email='lu.dare@gmail.com'}
+Registrant{firstName='Ezekiel', lastName='Ziemann', ssn='044-36-8529', login='null', langKey='null', password='*h*%gqu8i5i1wUs2', email='becki.weissnat@hotmail.com'}
+Registrant{firstName='Summer', lastName='Bruen', ssn='284-10-7190', login='SummerBruen', langKey='null', password='P#X9EuO$I$B^P7$6', email='null'}
+Registrant{firstName='Marc', lastName='Gerhold', ssn='333-55-7632', login='MarcGerhold', langKey='null', password='n4euYi!VcOEE*', email='ramon.deckow@gmail.com'}
+Registrant{firstName='Marion', lastName='Bergnaum', ssn='553-24-6664', login='null', langKey='null', password='@b!CvwYyS*$&P5eQv', email='marlin.cassin@yahoo.com'}
+Registrant{firstName='Jermaine', lastName='Boehm', ssn='695-47-8558', login='JermaineBoehm', langKey='null', password='BeuST*DDU*22@', email='null'}

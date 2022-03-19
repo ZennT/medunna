@@ -31,7 +31,7 @@ public class    SignInPage {
     @FindBy(id = "rememberMe")
     public WebElement rememberMe;
 
-
-
+    @FindBy(xpath = "//*[contains(text(),'Register')]")
+    public WebElement registerButton;
 
 }
