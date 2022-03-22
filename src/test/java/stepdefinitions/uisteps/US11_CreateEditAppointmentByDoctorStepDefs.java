@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import pages.DoctorPage;
 import pages.SignInPage;
 import pages.US11_CreateEditAppointmentByDoctor;
 import utilities.Driver;
