@@ -1,3 +1,6 @@
+
+
+
 package pages;
 
 import org.openqa.selenium.WebElement;
@@ -59,6 +62,7 @@ public class DoctorPage {
 
     @FindBy(xpath = "//*[text()='InPatient request already done for this appointment']")
     public WebElement requestAlreadyDoneMessageToastContainer;
+
 
 
 
