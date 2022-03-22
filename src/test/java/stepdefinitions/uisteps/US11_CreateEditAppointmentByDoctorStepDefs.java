@@ -144,13 +144,13 @@ public class US11_CreateEditAppointmentByDoctorStepDefs {
         createEditAppointmentByDoctor.diagnosisField.sendKeys(""+Keys.TAB);
     }
 
-    @Then("Doctor clicks on Sign out button")
-    public void doctorClicksOnSignOutButton() {
-        Driver.wait(2);
-        Driver.waitAndClick(signInPage.loginDropdown);
-        Driver.waitAndClick(doctorPage.signOut);
-        Driver.wait(2);
-    }
+//    @Then("Doctor clicks on Sign out button")
+//    public void doctorClicksOnSignOutButton() {
+//        Driver.wait(2);
+//        Driver.waitAndClick(signInPage.loginDropdown);
+//        Driver.waitAndClick(doctorPage.signOut);
+//        Driver.wait(2);
+//    }
 
 
 }

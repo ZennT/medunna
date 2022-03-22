@@ -12,7 +12,6 @@ public class    SignInPage {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-
     @FindBy(id = "account-menu")
     public WebElement loginDropdown;
 
@@ -31,7 +30,7 @@ public class    SignInPage {
     @FindBy(id = "rememberMe")
     public WebElement rememberMe;
 
-
-
+    @FindBy(xpath = "//*[contains(text(),'Register')]")
+    public WebElement registerButton;
 
 }

@@ -27,7 +27,7 @@ public class Registrant {
   "ssn": "string"
 }
      */
-
+    private String userName;
     private String firstName;
     private String lastName;
     private String ssn;
@@ -103,6 +103,14 @@ public class Registrant {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
 
