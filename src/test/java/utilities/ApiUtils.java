@@ -2,6 +2,8 @@ package utilities;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import pojos.CreateUpdateDeleteTestItem;
+import pojos.Registrant;
 
 import static io.restassured.RestAssured.given;
 
@@ -21,5 +23,19 @@ public class ApiUtils {
 
         return response;
 
+    }
+
+    public static Response postRequestTestItem(String token, String endpoint, CreateUpdateDeleteTestItem createUpdateDeleteTestItem) {
+
+        Response response = given().headers(
+                "Authorization",
+                "Bearer " + token,
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).contentType(ContentType.JSON).body(createUpdateDeleteTestItem).when().post(endpoint);
+
+
+        return response;
     }
 }
