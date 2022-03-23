@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@UIRegistrationPage",
+        tags = "@Api",
 
 
 
