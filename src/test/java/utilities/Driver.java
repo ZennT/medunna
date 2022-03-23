@@ -113,7 +113,6 @@ public class Driver {
     }
 
 
-
     public static void waitAndSendTextWithDefaultTime(WebElement element, String text) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -287,6 +286,7 @@ public class Driver {
         Select objSelect = new Select(element);
         objSelect.selectByVisibleText(text);
     }
+
     //    Parameter1 : WebElement
 //    Parameter2:  int
 //    Driver.selectByIndex(dropdown element, 1)
@@ -294,6 +294,7 @@ public class Driver {
         Select objSelect = new Select(element);
         objSelect.selectByIndex(index);
     }
+
     //    Parameter1 : WebElement
 //    Parameter2:  String
 //    Driver.selectByIndex(dropdown element, "91303")
@@ -314,5 +315,12 @@ public class Driver {
 
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
+    }
+
+
+    public static void clickElementByJS(WebElement element) {
+        // javascript executor click
+        JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
+        jsexecutor.executeScript("arguments[0].click();", element);
     }
 }
