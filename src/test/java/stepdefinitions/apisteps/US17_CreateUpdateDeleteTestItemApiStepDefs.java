@@ -26,10 +26,10 @@ import static utilities.WriteToTxt.saveTestItemInfo;
 public class US17_CreateUpdateDeleteTestItemApiStepDefs {
 
 
-    CreateUpdateDeleteTestItem createUpdateDeleteTestItem= new CreateUpdateDeleteTestItem();
+    CreateUpdateDeleteTestItem createUpdateDeleteTestItem = new CreateUpdateDeleteTestItem();
     Faker faker = new Faker();
     Response response;
-    CreateUpdateDeleteTestItem [] createUpdateDeleteTestItems;
+    CreateUpdateDeleteTestItem[] createUpdateDeleteTestItems;
 
 
     //=================================Test Items Post Request=====================================
@@ -37,16 +37,16 @@ public class US17_CreateUpdateDeleteTestItemApiStepDefs {
     @Given("user sets the path params to create test item")
     public void user_sets_the_path_params_to_create_test_item() {
 
-        spec.pathParams("first","api","second","c-test-items");
+        spec.pathParams("first", "api", "second", "c-test-items");
 
     }
 
     @Given("user sets expected data")
     public void user_sets_expected_data() {
 
-        createUpdateDeleteTestItem.setName(faker.name().firstName()+" test");
+        createUpdateDeleteTestItem.setName(faker.name().firstName() + " test");
         createUpdateDeleteTestItem.setDescription("mg/mL");
-        createUpdateDeleteTestItem.setPrice(faker.number().numberBetween(100,150)+"");
+        createUpdateDeleteTestItem.setPrice(faker.number().numberBetween(100, 150) + "");
         createUpdateDeleteTestItem.setDefaultValMin("80");
         createUpdateDeleteTestItem.setDefaultValMax("130");
 
@@ -55,7 +55,7 @@ public class US17_CreateUpdateDeleteTestItemApiStepDefs {
     @Given("user send Post request for test item and gets response")
     public void user_send_post_request_for_test_item_and_gets_response() {
 
-        response=postRequestTestItem(generateToken(), ConfigurationReader.getProperty("testItem_endpoint"),createUpdateDeleteTestItem);
+        response = postRequestTestItem(generateToken(), ConfigurationReader.getProperty("testItem_endpoint"), createUpdateDeleteTestItem);
         response.prettyPrint();
 
     }
@@ -69,18 +69,17 @@ public class US17_CreateUpdateDeleteTestItemApiStepDefs {
 
     @Then("user validates test item record with Api")
     public void user_validates_test_item_record_with_api() throws IOException {
-            response.then().statusCode(201);
+        response.then().statusCode(201);
 
-            ObjectMapper obj=new ObjectMapper();
-        CreateUpdateDeleteTestItem actualCreateUpdateDeleteTestItem=obj.readValue(response.asString(),CreateUpdateDeleteTestItem.class);
+        ObjectMapper obj = new ObjectMapper();
+        CreateUpdateDeleteTestItem actualCreateUpdateDeleteTestItem = obj.readValue(response.asString(), CreateUpdateDeleteTestItem.class);
 
-            assertEquals(createUpdateDeleteTestItem.getName(),actualCreateUpdateDeleteTestItem.getName());
-            assertEquals(createUpdateDeleteTestItem.getDescription(),actualCreateUpdateDeleteTestItem.getDescription());
-            assertEquals(createUpdateDeleteTestItem.getPrice(),actualCreateUpdateDeleteTestItem.getPrice());
-            assertEquals(createUpdateDeleteTestItem.getDefaultValMin(),actualCreateUpdateDeleteTestItem.getDefaultValMin());
-            assertEquals(createUpdateDeleteTestItem.getDefaultValMax(),actualCreateUpdateDeleteTestItem.getDefaultValMax());
-        }
-
+        assertEquals(createUpdateDeleteTestItem.getName(), actualCreateUpdateDeleteTestItem.getName());
+        assertEquals(createUpdateDeleteTestItem.getDescription(), actualCreateUpdateDeleteTestItem.getDescription());
+        assertEquals(createUpdateDeleteTestItem.getPrice(), actualCreateUpdateDeleteTestItem.getPrice());
+        assertEquals(createUpdateDeleteTestItem.getDefaultValMin(), actualCreateUpdateDeleteTestItem.getDefaultValMin());
+        assertEquals(createUpdateDeleteTestItem.getDefaultValMax(), actualCreateUpdateDeleteTestItem.getDefaultValMax());
+    }
 
 
     //=================================Test Items Get Request=============================================
@@ -88,7 +87,7 @@ public class US17_CreateUpdateDeleteTestItemApiStepDefs {
     @Given("user sends the get request for test items data")
     public void user_sends_the_get_request_for_test_items_data() {
 
-        response=getRequest(generateToken(),ConfigurationReader.getProperty("testItem_endpoint"));
+        response = getRequest(generateToken(), ConfigurationReader.getProperty("testItem_endpoint"));
         //response.prettyPrint();
 
     }
@@ -96,7 +95,7 @@ public class US17_CreateUpdateDeleteTestItemApiStepDefs {
     @Given("user deserializes test items data to Java")
     public void user_deserializes_test_items_data_to_java() throws IOException {
         ObjectMapper obj = new ObjectMapper();
-        createUpdateDeleteTestItems = obj.readValue(response.asString(),CreateUpdateDeleteTestItem[].class);
+        createUpdateDeleteTestItems = obj.readValue(response.asString(), CreateUpdateDeleteTestItem[].class);
 
     }
 
@@ -108,9 +107,9 @@ public class US17_CreateUpdateDeleteTestItemApiStepDefs {
 
     @Then("user validates expected test item records with Api")
     public void user_validates_expected_test_item_records_with_api() {
-        List<String> expectedData=getTestItemNames();
+        List<String> expectedData = getTestItemNames();
         //System.out.println("expected:"+ expectedData);
-        List<String> actualTestItems=getApiTestItemNames();
+        List<String> actualTestItems = getApiTestItemNames();
         //System.out.println("actual: "+actualTestItems);
         Assert.assertTrue(actualTestItems.containsAll(expectedData));
 

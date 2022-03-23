@@ -28,13 +28,13 @@ public class ReadTxt {
 
                 line = br.readLine();
             }
-             }catch (Exception e){
+        }catch (Exception e){
 
-            e.printStackTrace();
+ e.printStackTrace();
 
         }
 
-             return list;
+        return list;
     }
 
 
