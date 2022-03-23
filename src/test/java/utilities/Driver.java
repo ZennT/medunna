@@ -318,6 +318,10 @@ public class Driver {
     }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     public static void clickElementByJS(WebElement element) {
         // javascript executor click
         JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());

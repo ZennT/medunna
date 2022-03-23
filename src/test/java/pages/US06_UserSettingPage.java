@@ -41,4 +41,9 @@ public class US06_UserSettingPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveButton;
 
+    @FindBy(xpath = "//li[@id='account-menu']")
+    public WebElement accountMenu;
+    @FindBy(xpath = "(//*[@class='dropdown-item'])[1]")
+    public WebElement signIn;
+
 }

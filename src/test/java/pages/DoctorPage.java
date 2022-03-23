@@ -1,6 +1,3 @@
-
-
-
 package pages;
 
 import org.openqa.selenium.WebElement;
@@ -12,9 +9,7 @@ import java.util.List;
 
 public class DoctorPage {
 
-    public DoctorPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+
 
     @FindBy(id = "entity-menu")
     public WebElement myPagesDropDown;
