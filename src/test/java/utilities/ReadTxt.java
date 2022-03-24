@@ -30,7 +30,7 @@ public class ReadTxt {
             }
         }catch (Exception e){
 
-            e.printStackTrace();
+ e.printStackTrace();
 
         }
 
@@ -77,5 +77,78 @@ public class ReadTxt {
         }
         return list;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
