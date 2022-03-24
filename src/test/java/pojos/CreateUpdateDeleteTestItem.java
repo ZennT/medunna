@@ -10,14 +10,14 @@ public class CreateUpdateDeleteTestItem {
 /*      from Swagger/Post/create CTestItem/Model
 
     {Jump to definition
-        createdBy  string
-        createdDate    string($date-time)
-        defaultValMax  string
-        defaultValMin  string
-        description    string
-        id integer($int64)
-            name   string
-        price* number
+        createdBy	string
+        createdDate	string($date-time)
+        defaultValMax	string
+        defaultValMin	string
+        description	string
+        id	integer($int64)
+            name	string
+        price*	number
         minimum: 0
         exclusiveMinimum: false}
     */

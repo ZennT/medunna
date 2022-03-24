@@ -30,7 +30,7 @@ public class ReadTxt {
             }
         }catch (Exception e){
 
-            e.printStackTrace();
+ e.printStackTrace();
 
         }
 

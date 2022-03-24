@@ -170,4 +170,5 @@ public class ReusableMethods {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
-}
+
+        }

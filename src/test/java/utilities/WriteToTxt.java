@@ -72,36 +72,36 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
-    public static void saveTestItemInfo(CreateUpdateDeleteTestItem createUpdateDeleteTestItem){
-        try{
+    public static void saveTestItemInfo(CreateUpdateDeleteTestItem createUpdateDeleteTestItem) {
+        try {
             FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("created_testItem_records"), true);
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            writer.append(createUpdateDeleteTestItem.getName()+","+createUpdateDeleteTestItem.getDescription()+","+createUpdateDeleteTestItem.getPrice()+","+
-                    createUpdateDeleteTestItem.getDefaultValMin()+","+createUpdateDeleteTestItem.getDefaultValMax()+","+createUpdateDeleteTestItem.getCreatedDate()+"\n");
+            writer.append(createUpdateDeleteTestItem.getName() + "," + createUpdateDeleteTestItem.getDescription() + "," + createUpdateDeleteTestItem.getPrice() + "," +
+                    createUpdateDeleteTestItem.getDefaultValMin() + "," + createUpdateDeleteTestItem.getDefaultValMax() + "," + createUpdateDeleteTestItem.getCreatedDate() + "\n");
 //writer.append(createUpdateDeleteTestItem+"\n");
 
 
             writer.close();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public static void saveAllTestItems(CreateUpdateDeleteTestItem [] createUpdateDeleteTestItem){
-        try{
+    public static void saveAllTestItems(CreateUpdateDeleteTestItem[] createUpdateDeleteTestItem) {
+        try {
             //we make it FALSE because we will update all data whenever we make a get request for all.
             // Every time we will get all data
             FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("testItems_All_records"), false);
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            for (int i=0;i<createUpdateDeleteTestItem.length;i++){
-                writer.append(createUpdateDeleteTestItem[i].getName()+","+createUpdateDeleteTestItem[i].getDescription()+","+
-                        createUpdateDeleteTestItem[i].getPrice()+","+createUpdateDeleteTestItem[i].getDefaultValMin()+","+
-                        createUpdateDeleteTestItem[i].getDefaultValMax()+","+createUpdateDeleteTestItem[i].getCreatedDate()+"\n");
+            for (int i = 0; i < createUpdateDeleteTestItem.length; i++) {
+                writer.append(createUpdateDeleteTestItem[i].getName() + "," + createUpdateDeleteTestItem[i].getDescription() + "," +
+                        createUpdateDeleteTestItem[i].getPrice() + "," + createUpdateDeleteTestItem[i].getDefaultValMin() + "," +
+                        createUpdateDeleteTestItem[i].getDefaultValMax() + "," + createUpdateDeleteTestItem[i].getCreatedDate() + "\n");
             }
             writer.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
