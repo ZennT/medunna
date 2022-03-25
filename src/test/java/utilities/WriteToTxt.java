@@ -140,4 +140,25 @@ public static void saveDBTestItemsData(List<Object> testItems) {
         }
     }
 
+    public static void saveApiAppointment(DoctorAppointment doctorAppointment) {
+        try {
+            //src/resources/testdata/Registrantdata.txt
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("API_doctorAppointment_data"), true);
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+
+            writer.append(doctorAppointment + "\n");
+
+
+            writer.close();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
 }
