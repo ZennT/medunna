@@ -1,9 +1,6 @@
 package utilities;
 
-import pojos.Appointment;
-import pojos.CreateUpdateDeleteTestItem;
-import pojos.NewPatientCreation;
-import pojos.Registrant;
+import pojos.*;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -133,6 +130,45 @@ public static void saveDBTestItemsData(List<Object> testItems) {
 
             for (Object eachTestItem : testItems) {
                 writer.append(eachTestItem + ",\n");
+            }
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveRoomData(RoomCreateUpdateDelete room) {
+        try {
+            //src/resources/testdata/Registrantdata.txt
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("room_records"), true);
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+
+            writer.append(room + "\n");
+
+
+            writer.close();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public static void saveAllRoomData(RoomCreateUpdateDelete[] room) {
+        try {
+            //we make it FALSE because we will update all data whenever we make a get request for all.
+            // Every time we will get all data
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("room_All_records"), false);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            for (int i = 0; i < room.length; i++) {
+                writer.append(room[i].getCreatedBy() + "," + room[i].getDescription() + "," +
+                        room[i].getPrice() + "," + room[i].getRoomNumber() + "," +
+                        room[i].getRoomType() + "," + room[i].isStatus() + "\n");
             }
             writer.close();
         } catch (Exception e) {

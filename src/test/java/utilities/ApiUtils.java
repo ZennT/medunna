@@ -4,6 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojos.CreateUpdateDeleteTestItem;
 import pojos.Registrant;
+import pojos.RoomCreateUpdateDelete;
 
 import static io.restassured.RestAssured.given;
 
@@ -34,6 +35,20 @@ public class ApiUtils {
                 ContentType.JSON,
                 "Accept",
                 ContentType.JSON).contentType(ContentType.JSON).body(createUpdateDeleteTestItem).when().post(endpoint);
+
+
+        return response;
+    }
+
+    public static Response postRequestRoom(String token, String endpoint, RoomCreateUpdateDelete room) {
+
+        Response response = given().headers(
+                "Authorization",
+                "Bearer " + token,
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).contentType(ContentType.JSON).body(room).when().post(endpoint);
 
 
         return response;

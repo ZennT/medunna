@@ -117,11 +117,13 @@ public class Hooks {
 
 
 
+    @Before( value = "@Room")
+    public void setupRoomApi(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
 
 
-
-
-
+    }
 
     @Before(order = 1, value = "@UILoginStaff")
     public void navigateToLoginPageStaff(){

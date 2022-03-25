@@ -9,3 +9,9 @@ Registrant{firstName='Jermaine', lastName='Boehm', ssn='695-47-8558', login='Jer
 Registrant{firstName='Gaston', lastName='Senger', ssn='679-54-6547', login='GastonSenger', langKey='null', password='i@V5AIe&3ba*', email='blair.reinger@gmail.com'}
 Registrant{firstName='Oren', lastName='Hahn', ssn='082-90-0597', login='null', langKey='null', password='a%GPXq$Ikp9jetm6xh', email='lakesha.moore@yahoo.com'}
 Registrant{firstName='Theodore', lastName='Tromp', ssn='776-04-0787', login='TheodoreTromp', langKey='null', password='6#3ML$D^8$', email='null'}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=8936, roomNumber=5828, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=7519, roomNumber=6955, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=6237, roomNumber=6478, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=9258, roomNumber=6424, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=9008, roomNumber=6703, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=6162, roomNumber=6410, roomType='DELUXE', status=true}
