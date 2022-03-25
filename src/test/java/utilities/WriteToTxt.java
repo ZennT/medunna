@@ -72,6 +72,7 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
+
     public static void saveTestItemInfo(CreateUpdateDeleteTestItem createUpdateDeleteTestItem) {
         try {
             FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("created_testItem_records"), true);
@@ -88,6 +89,7 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
+
     public static void saveAllTestItems(CreateUpdateDeleteTestItem[] createUpdateDeleteTestItem) {
         try {
             //we make it FALSE because we will update all data whenever we make a get request for all.
@@ -106,4 +108,32 @@ public class WriteToTxt {
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void saveDBTestItemsData(List<Object> testItems) {
+        try {
+            //we make it FALSE to add updated data
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("DB_testItems_data"), false);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            for (Object eachTestItem : testItems) {
+                writer.append(eachTestItem + ",\n");
+            }
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

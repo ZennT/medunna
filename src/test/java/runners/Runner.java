@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@ApiGetTestItem",
+        tags = " @US17_DBTest",
 
 
 
