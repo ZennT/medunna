@@ -68,6 +68,26 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
 
     }
+    @Before(order = 1, value = "@UILogin")
+    public void navigateToLoginPage(){
+
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+
+    }
+
+    @Before( value = "@TestItemApi")
+    public void postTestItemSetup(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+    }
+
+    @Before( value = "@US_15_Api_test")
+    public void setuppatient(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
 
 
 
@@ -84,6 +104,45 @@ public class Hooks {
 
 
 
+
+
+
+
+
+
+
+
+
+
+    @Before( value = "@Appointments_api_validation")
+    public void setAPI(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Before(order = 1, value = "@UILoginStaff")
+    public void navigateToLoginPageStaff(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+
+    }
 
 
     @After
