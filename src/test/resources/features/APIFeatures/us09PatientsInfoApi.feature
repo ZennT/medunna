@@ -7,3 +7,5 @@ Feature: Test all patient info
     And send the GET request and get the response
     And set the expected data
     Then do validation
+
+
