@@ -102,7 +102,11 @@ public class RegistrationPage {
         @FindBy(xpath= "//*[@id='strengthBar']/li[contains(@style,'rgb(0, 255, 0)')]")
         public  WebElement passwordStrength4;
 
+        @FindBy(xpath = "//*[contains(text(), 'Your email is required.')]")
+        public WebElement requiredEmailText;
 
+        @FindBy(xpath = "//*[contains(text(), 'Your username is invalid.')]")
+        public WebElement invalidUserNameText;
 
 
 

@@ -71,6 +71,60 @@ public class Hooks {
     @Before(order = 1, value = "@UILogin")
     public void navigateToLoginPage() {
 
+    @Before( value = "@TestItemApi")
+    public void postTestItemSetup(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+    }
+
+    @Before( value = "@US_15_Api_test")
+    public void setuppatient(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
