@@ -17,7 +17,10 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@ApiGetTestItem",
+
+
+        tags = "@US_15_Api_test",
+
 
 
 
