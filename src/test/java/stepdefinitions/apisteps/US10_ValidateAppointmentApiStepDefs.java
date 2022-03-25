@@ -36,7 +36,7 @@ public class US10_ValidateAppointmentApiStepDefs {
                 "Content-Type",
                 ContentType.JSON,
                 "Accept",
-                ContentType.JSON).when().get(ConfigurationReader.getProperty("api_appointments_endpoint"));
+                ContentType.JSON).when().get(ConfigurationReader.getProperty("api_appointments"));
         response.prettyPrint();
     }
     @And("Doctor deserialize data json to java")

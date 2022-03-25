@@ -164,7 +164,7 @@ public static void saveDBTestItemsData(List<Object> testItems) {
 
     }
 
-<<<<<<< HEAD
+
 
 
 
@@ -236,6 +236,4 @@ public static void saveDBTestItemsData(List<Object> testItems) {
 
 
 }
-=======
-}
->>>>>>> master
+

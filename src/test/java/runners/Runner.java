@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         features = "./src/test/resources/features",
-<<<<<<< HEAD
+
         glue = {"stepdefinitions","Hooks"},
 
 
@@ -25,12 +25,10 @@ import org.junit.runner.RunWith;
 
         dryRun = false
 
-=======
-        glue = {"stepdefinitions", "Hooks"},
->>>>>>> master
 
 
-        tags = "@staff", dryRun = false
+
+
 
 
 )
