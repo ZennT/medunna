@@ -69,6 +69,60 @@ public class Hooks {
 
     }
 
+    @Before( value = "@TestItemApi")
+    public void postTestItemSetup(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+    }
+
+    @Before( value = "@US_15_Api_test")
+    public void setuppatient(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

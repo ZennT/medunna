@@ -15,9 +15,12 @@ import static org.junit.Assert.assertTrue;
 public class US06_UserSettingStepDefs {
     US06_UserSettingPage userSettingPage=new US06_UserSettingPage();
     RegistrationPage registrationPage=new RegistrationPage();
+
     @Given("user on the Medunna Sign in  Page")
     public void user_on_the_medunna_sign_in_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+        Driver.waitAndClick(userSettingPage.accountMenu);
+        Driver.waitAndClick(userSettingPage.signIn);
     }
     @Given("user enters username {string}")
     public void user_enters_username(String string) {
