@@ -30,7 +30,7 @@ public class ReadTxt {
             }
         }catch (Exception e){
 
- e.printStackTrace();
+            e.printStackTrace();
 
         }
 
@@ -139,6 +139,46 @@ public class ReadTxt {
             // we are reading the records of the file in given location here
             BufferedReader br=new BufferedReader(fileReader);
             String line=br.readLine();
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+    public static List<String> getDoctorAppointment_1(){
+        List<String> list=new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("DoctorAppointment_data_1"));
+            // we are reading the records of the file in given location here
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+
+
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+    public static List<String> getDoctorAppointment_2(){
+        List<String> list=new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("DoctorAppointment_data_2"));
+            // we are reading the records of the file in given location here
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+
+
             while (line !=null){
                 String name=line.split(",")[0];
                 list.add(name);

@@ -8,11 +8,56 @@ import utilities.Driver;
 import java.util.List;
 
 public class StaffPage {
-    public StaffPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
 
+    public StaffPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(xpath = "(//*[text()='MY PAGES'])[1]")
+    public WebElement mypages;
+    @FindBy(xpath = "(//*[text()='Search Patient'])[1]")
+    public WebElement searchpatient;
+    @FindBy(xpath = "//*[@name='ssn']")
+    public WebElement ssntextbox;
+    @FindBy(xpath = "//*[@id='app-view-container']/div/div/div/div[2]/div/table/tbody")
+    public WebElement firstpatientinfo;
+    @FindBy(xpath = "(//*[text()='Show Appointments'])[1]")
+    public WebElement showappointment;
+    @FindBy(xpath = "//*[text()='Show Tests']")
+    public WebElement showtest;
+    @FindBy(xpath = "//span[text()='View Results']")
+    public WebElement viewResultsButton;
+    @FindBy(xpath = "//*[text()='Edit']")
+    public WebElement editButton;
+    @FindBy(xpath = "//*[contains(text(),'A Test Result is updated with identifier')]")
+    public WebElement editSuccessToastContainer;
+    @FindBy(id = "c-test-result-result")
+    public WebElement resultTextBox;
+    @FindBy(id = "c-test-result-description")
+    public WebElement descriptionTextBox;
+    @FindBy(xpath = "//*[.='Save']")
+    public WebElement editSaveButton;
+    @FindBy(id = "c-test-result-heading")
+    public WebElement testresultheading;
+    @FindBy(xpath = "//thead//tr//th")
+    public List<WebElement> testresultlist;
+
+    @FindBy(xpath = "//li[@id='account-menu']")
+    public WebElement accountMenu;
+    @FindBy(xpath = "//a[@href='/logout']")
+    public WebElement signOutButton;
+
+    //    @FindBy (xpath = "//span[text()='View Results']")
+//    public WebElement viewResultsButton;
+//
+//    @FindBy(xpath = "//*[text()='Edit']")
+//    public WebElement editButton;
+//
+//    @FindBy(id = "c-test-result-result")
+//    public WebElement resultTextBox;
+
+//    @FindBy(id="c-test-result-description")
+//    public WebElement descriptionTextBox;
     @FindBy(xpath = "//span[normalize-space()='MY PAGES']")
     public WebElement myPagesDropdownButton;
 
@@ -58,25 +103,15 @@ public class StaffPage {
     @FindBy(xpath = "//span[text()='Show Tests']")
     public WebElement showTestsButton;
 
-    @FindBy (xpath = "//span[text()='View Results']")
-    public WebElement viewResultsButton;
 
-    @FindBy(xpath = "//*[text()='Edit']")
-    public WebElement editButton;
 
-    @FindBy(id = "c-test-result-result")
-    public WebElement resultTextBox;
-
-    @FindBy(id="c-test-result-description")
-    public WebElement descriptionTextBox;
-
-    @FindBy (xpath="//table")
+    @FindBy(xpath = "//table")
     public WebElement testItemTable;
 
- @FindBy(xpath = "//*[contains(text(),'A Bill is updated with identifier')]")
+    @FindBy(xpath = "//*[contains(text(),'A Bill is updated with identifier')]")
     public WebElement paymentSuccessToastContainer;
 
- @FindBy(xpath = "//*[text()='No Patients found']")
+    @FindBy(xpath = "//*[text()='No Patients found']")
     public WebElement noPatientsFoundMessage;
 
     @FindBy(xpath = "//span[text()='Sign out']")
@@ -91,7 +126,7 @@ public class StaffPage {
     @FindBy(xpath = "//*[@id='c-test-result-heading']")
     public WebElement testResultText;
 
-    @FindBy(id="appointment-physician")
+    @FindBy(id = "appointment-physician")
     public WebElement physicianDropdown;
 
     @FindBy(xpath = "//*[contains(text(),'Appointment is ')]")
@@ -100,15 +135,16 @@ public class StaffPage {
     @FindBy(xpath = "//div/div/div/div/div/table/tbody/tr/td[4]/span")
     public List<WebElement> statusList;
 
-    @FindBy( xpath = "//textarea[1]")
+    @FindBy(xpath = "//textarea[1]")
     public WebElement anamnesisText;
 
-    @FindBy( id="appointment-treatment")
+    @FindBy(id = "appointment-treatment")
     public WebElement treatmentText;
 
-    @FindBy( id="appointment-diagnosis")
+    @FindBy(id = "appointment-diagnosis")
     public WebElement diagnosisText;
 
 
 
 }
+

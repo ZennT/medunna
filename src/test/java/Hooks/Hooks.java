@@ -114,6 +114,21 @@ public class Hooks {
 
 
 
+    @Before( value = "@Appointments_api_validation")
+    public void setAPI(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -128,6 +143,7 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
     }
+
 
     @After
     public void tearDown(Scenario scenario){

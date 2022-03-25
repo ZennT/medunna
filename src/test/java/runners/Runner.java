@@ -14,10 +14,21 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions", "Hooks"},
+
+        glue = {"stepdefinitions","Hooks"},
 
 
-        tags = "@staff", dryRun = false
+
+        tags = "@Appointments_api_validation",
+
+
+
+        dryRun = false
+
+
+
+
+
 
 
 )

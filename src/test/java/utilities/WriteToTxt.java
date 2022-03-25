@@ -1,5 +1,6 @@
 package utilities;
 
+import pages.DoctorAppointment;
 import pojos.Appointment;
 import pojos.CreateUpdateDeleteTestItem;
 import pojos.NewPatientCreation;
@@ -72,6 +73,8 @@ public class WriteToTxt {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 
     public static void saveTestItemInfo(CreateUpdateDeleteTestItem createUpdateDeleteTestItem) {
@@ -161,4 +164,76 @@ public static void saveDBTestItemsData(List<Object> testItems) {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
