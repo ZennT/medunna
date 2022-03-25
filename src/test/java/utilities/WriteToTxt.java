@@ -1,5 +1,6 @@
 package utilities;
 
+import pages.DoctorAppointment;
 import pojos.Appointment;
 import pojos.Registrant;
 
@@ -70,7 +71,79 @@ public class WriteToTxt {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

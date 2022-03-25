@@ -70,7 +70,4 @@ public class US10_ValidateAppointmentStepDefs {
 
     }
 
-
-
-
 }

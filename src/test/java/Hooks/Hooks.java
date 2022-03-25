@@ -86,6 +86,34 @@ public class Hooks {
 
 
 
+
+
+
+    @Before( value = "@Appointments_api_validation")
+    public void setAPI(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @After
     public void tearDown(Scenario scenario){
 

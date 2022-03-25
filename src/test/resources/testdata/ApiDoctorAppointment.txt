@@ -1,0 +1,2 @@
+DoctorAppointment{id='null', start_date='null', end_date='null', status='null'}
+DoctorAppointment{id='null', start_date='null', end_date='null', status='null'}
