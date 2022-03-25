@@ -68,6 +68,13 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
 
     }
+    @Before(order = 1, value = "@UILogin")
+    public void navigateToLoginPage(){
+
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+
+    }
 
     @Before( value = "@TestItemApi")
     public void postTestItemSetup(){
@@ -116,29 +123,11 @@ public class Hooks {
 
 
 
+    @Before(order = 1, value = "@UILoginStaff")
+    public void navigateToLoginPageStaff(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
     @After
     public void tearDown(Scenario scenario){

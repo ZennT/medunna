@@ -41,7 +41,7 @@ public class US01_03_RegistrationStepDefs {
     }
 
     @And("user provides firstname and lastname {string} and {string}")
-    public void userEntersFirstnameAsAndLastnameAs(String firstname, String lastname) {
+    public void userProvidesFirstnameAsAndLastnameAs(String firstname, String lastname) {
         firstname=faker.name().firstName();
         registrant.setFirstName(firstname);
         lastname = faker.name().lastName();
