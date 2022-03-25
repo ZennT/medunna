@@ -55,6 +55,36 @@ public class Hooks {
 
     }
 
+    @Before(value = "@UIAppointment")
+    public void navigateToAppointmentPage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+
+    }
+
+    @Before(value = "@UIHome")
+    public void navigateToHomePage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
+
+    }
+    @Before(order = 1, value = "@UILogin")
+    public void navigateToLoginPage() {
+
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
     @After
@@ -66,8 +96,28 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-//        Driver.closeDriver();
 
+
+
+
+//        Driver.closeDriver
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+

@@ -24,15 +24,28 @@ public class DoctorPage {
     public WebElement requestInpatient;
 
     @FindBy(id = "fromDate")
-    public WebElement fromDateBox;
+    public WebElement fromDate;
 
     @FindBy(id = "toDate")
-    public WebElement toDateBox;
+    public WebElement toDate;
 
     @FindBy(xpath = "//div[@class='btn-group flex-btn-group-container']")
     public List<WebElement> editList;
 
-    @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[1]")
+    @FindBy(xpath = "(//div[@class='btn-group flex-btn-group-container'])[3]")
     public WebElement  edit1;
+
+    @FindBy(xpath = "//textarea[@name='prescription']")
+    public WebElement prescriptionField;
+
+    @FindBy(xpath = "//textarea[@name='description']")
+    public WebElement descriptionField;
+
+    @FindBy(xpath = "//*[contains(text(), 'This field is required.')]")
+    public WebElement fieldRequiredText;
+
+    @FindBy (xpath = "//a[@href='/logout']")
+    public WebElement signOut;
+
 
 }
