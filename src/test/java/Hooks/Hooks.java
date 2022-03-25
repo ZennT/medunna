@@ -123,7 +123,11 @@ public class Hooks {
 
 
 
+    @Before(order = 1, value = "@UILoginStaff")
+    public void navigateToLoginPageStaff(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
+    }
 
     @After
     public void tearDown(Scenario scenario){

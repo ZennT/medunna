@@ -1,7 +1,7 @@
 @staff
 Feature: test payment_invoice data
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test payment invoice
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -25,7 +25,7 @@ Feature: test payment_invoice data
       | 199-59-9895 |
 
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test payment with invalid ssn
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -38,7 +38,7 @@ Feature: test payment_invoice data
       | 999-59-9895 |
       | 234567789   |
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test payment status unapproved
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -51,7 +51,7 @@ Feature: test payment_invoice data
       | ssn         | status     |
       | 555-65-4587 | UNAPPROVED |
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test payment status cancelled
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -65,7 +65,7 @@ Feature: test payment_invoice data
       | 555-65-4587 | CANCELLED |
 
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test payment status completed
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -78,7 +78,7 @@ Feature: test payment_invoice data
       | ssn         | status    |
       | 199-59-9895 | COMPLETED |
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test payment status pending
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -91,7 +91,7 @@ Feature: test payment_invoice data
       | ssn         | status  |
       | 555-65-4587 | PENDING |
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test payment status
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -108,7 +108,7 @@ Feature: test payment_invoice data
     #command +option +l codlari duzenlemek icin
 
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: staff edit
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -125,7 +125,7 @@ Feature: test payment_invoice data
       | ssn         |
       | 417-85-5181 |
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: show test result
     Given user sign in with staff credential
     And user clicks my pages dropdown
@@ -140,8 +140,8 @@ Feature: test payment_invoice data
       | ssn         |
       | 199-59-9895 |
 
-  @UILogin
-  Scenario Outline: test physcian
+  @UILoginStaff
+  Scenario Outline: test physician
     Given user sign in with staff credential
     And user clicks my pages dropdown
     And user clicks search patient button
@@ -157,7 +157,7 @@ Feature: test payment_invoice data
       | ssn         |
       | 199-59-9895 |
 
-  @UILogin
+  @UILoginStaff
   Scenario Outline: test required field
     Given user sign in with staff credential
     And user clicks my pages dropdown
