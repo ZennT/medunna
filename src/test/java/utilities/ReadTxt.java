@@ -77,6 +77,26 @@ public class ReadTxt {
         }
         return list;
     }
+    public static List<String> getDBTestItemNames(){
+        List<String> list=new ArrayList<>();
+        try {
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("DB_testItems_data"));
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+
+
+
 
 
 

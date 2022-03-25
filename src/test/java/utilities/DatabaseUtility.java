@@ -5,14 +5,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 public class DatabaseUtility {
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
+
     public static void createConnection() {
         String url = ConfigurationReader.getProperty("database_url");
         String user = ConfigurationReader.getProperty("database_user");
         String password = "Techpro_@126";
+
         try {
             connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
@@ -20,11 +23,13 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
         createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
         System.out.println(getColumnData("Select * FROM jhi_user", "first_name"));
         closeConnection();
     }
+
     public static void createConnection(String url, String user, String password) {
         try {
             connection = DriverManager.getConnection(url, user, password);
