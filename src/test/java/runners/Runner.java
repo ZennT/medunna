@@ -1,7 +1,9 @@
 package runners;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
@@ -12,19 +14,10 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions","Hooks"},
+        glue = {"stepdefinitions", "Hooks"},
 
 
-
- tags = "@US_15_Api_test",
-
-
-
-
-        dryRun = false
-
-
-
+        tags = "@staff", dryRun = false
 
 
 )
