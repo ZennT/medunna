@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
         glue = {"stepdefinitions","Hooks"},
 
-        tags = "@Appointments_api_validation",
+        tags = "@RegressionTest",
 
         dryRun = false
 
@@ -25,6 +25,6 @@ import org.junit.runner.RunWith;
 )
 
 
-public class Runner {
-}
 
+public class RegressionRunner {
+}

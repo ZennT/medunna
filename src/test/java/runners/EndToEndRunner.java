@@ -1,5 +1,7 @@
 package runners;
 
+
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -17,14 +19,11 @@ import org.junit.runner.RunWith;
 
         glue = {"stepdefinitions","Hooks"},
 
-        tags = "@Appointments_api_validation",
+        tags = "@EndToEnd",
 
         dryRun = false
 
-
 )
 
-
-public class Runner {
+public class EndToEndRunner {
 }
-

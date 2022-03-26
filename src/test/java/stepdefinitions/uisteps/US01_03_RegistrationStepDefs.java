@@ -75,7 +75,7 @@ public class US01_03_RegistrationStepDefs {
     @Then("user registers and validates data generation")
     public void userRegistersAndValidatesDataGeneration() {
         Driver.waitAndClick(registrationPage.registerButton);
-        Driver.wait(1);
+        Driver.wait(5);
         Assert.assertTrue(registrationPage.successMessageToastContainer.isDisplayed());
     }
 
@@ -148,7 +148,9 @@ public class US01_03_RegistrationStepDefs {
     @And("verify password length less than the specified range in password")
     public void verifyPasswordLengthLessThanTheSpecifiedRangeInPassword() {
         String password = registrationPage.newPasswordTextBox.getText();
+        Driver.wait(5);
         if (password.length()<4) {
+            registrationPage.newPasswordTextBox.sendKeys(Keys.ENTER);
             Assert.assertTrue(registrationPage.newPasswordCharCheckText.isDisplayed());
         }
 
@@ -179,6 +181,7 @@ public class US01_03_RegistrationStepDefs {
 
     else if(4==Integer.parseInt(level))
         Assert.assertTrue(registrationPage.passwordStrength4.isDisplayed());
+
     }
 
 

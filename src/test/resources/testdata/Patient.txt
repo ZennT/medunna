@@ -76,7 +76,7 @@ null,null,null,zxc@gmail.comApositive,12345678910
 null,null,null,wan.botsford@hotmail.comAnegative,5712311234
 null,null,null,jeane.jast@yahoo.comAnegative,5712311234
 null,null,null,LemanYagublu@gmail.comAnegative,5712311234
-null,null,null,verlie.king@yahoo.comApositive,1234567889
+null,null,null,ronny.carroll@yahoo.comBnegative,4387221874
 null,null,null,myrtie.cronin@hotmail.comnull,1234567889
 null,null,null,omer.block@gmail.comnull,1234567889
 null,null,null,malinda.muller@gmail.comnull,1234567889
@@ -795,7 +795,6 @@ null,null,null,breanna.sipes@yahoo.comnull,222-333-4444
 null,null,null,karrie.jast@gmail.comnull,222-333-4444
 null,null,null,gul2@gmail.comnull,123-332-3555
 null,null,null,karanfil23@gmail.comnull,123-600-7890
-null,null,null,bryon.littel@gmail.comABpositive,1234567889
 null,null,null,sara@gmail.comnull,4561234565
 null,null,null,junie.mccullough@gmail.comnull,222-333-4444
 null,null,null,ayesha.parker@yahoo.comnull,253-283-2837
@@ -822,7 +821,6 @@ null,null,null,dennis.turner@yahoo.comnull,222-333-4444
 null,null,null,misi@gmail.comApositive,1234567810
 null,null,null,cisi@gmail.comApositive,1234567810
 null,null,null,yisi@gmail.comApositive,1234567810
-null,null,null,adan.mayert@gmail.comApositive,1234567889
 null,null,null,jisi@gmail.comApositive,1234567810
 null,null,null,wisi@gmail.comApositive,1234567810
 null,null,null,toya.glover@gmail.comApositive,1234567810
@@ -838,7 +836,6 @@ null,null,null,evon.tromp@hotmail.comApositive,1234567810
 null,null,null,lance.mosciski@gmail.comApositive,1234567810
 null,null,null,aa.zz@gmail.comApositive,4489532124
 null,null,null,rodolfo.crooks@hotmail.comApositive,1234567847
-null,null,null,fatih@mail.runull,333-333-2323
 null,null,null,yoko.ohara@yahoo.comnull,222-333-4444
 null,null,null,b001@gmail.comnull,253-283-2837
 null,null,null,cetin@gmail.comnull,253-283-2837
@@ -918,7 +915,6 @@ null,null,null,qa@gmail.comApositive,2345678914
 null,null,null,qa1@gmail.comApositive,2345678945
 null,null,null,nw1@gmail.comApositive,4345678945
 null,null,null,awilda.howe@hotmail.comnull,253-283-2837
-null,null,null,victoria@gmail.comApositive,5189073421
 null,null,null,seramay@gmail.comnull,345-226-4567
 null,null,null,mw1@gmail.comApositive,4845678945
 null,null,null,vera@gmail.comnull,532-568-6786
@@ -996,5 +992,9 @@ null,null,null,darcel.considine@yahoo.comApositive,1234567810
 null,null,null,doc7979@gmail.comnull,222-333-4444
 null,null,null,marcie.olson@hotmail.comApositive,1234567810
 null,null,null,cody.stamm@gmail.comApositive,1234567810
-null,null,null,adolfo.carter@yahoo.comAnegative,5712311234
 null,null,null,levi.lowe@hotmail.comApositive,1125480725
+null,null,null,joaquina.lehner@gmail.comApositive,6861326027
+null,null,null,elvis.hayes@yahoo.comApositive,1409297538
+null,null,null,allen.johnson@gmail.comnull,1466664868
+null,null,null,wilton.ruecker@hotmail.comBnegative,4387221874
+null,null,null,shizue.johnson@gmail.comnull,4756967641
