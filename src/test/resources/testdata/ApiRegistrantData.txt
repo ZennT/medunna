@@ -9,18 +9,9 @@ Registrant{firstName='Jermaine', lastName='Boehm', ssn='695-47-8558', login='Jer
 Registrant{firstName='Gaston', lastName='Senger', ssn='679-54-6547', login='GastonSenger', langKey='null', password='i@V5AIe&3ba*', email='blair.reinger@gmail.com'}
 Registrant{firstName='Oren', lastName='Hahn', ssn='082-90-0597', login='null', langKey='null', password='a%GPXq$Ikp9jetm6xh', email='lakesha.moore@yahoo.com'}
 Registrant{firstName='Theodore', lastName='Tromp', ssn='776-04-0787', login='TheodoreTromp', langKey='null', password='6#3ML$D^8$', email='null'}
-Registrant{firstName='Neil', lastName='Treutel', ssn='676-52-4995', login='NeilTreutel', langKey='null', password='fQhz$b1C0rK', email='tom.pfannerstill@hotmail.com'}
-Registrant{firstName='Amber', lastName='Muller', ssn='874-07-6833', login='AmberMuller', langKey='null', password='CI$G$9@e!Xi', email='susy.kihn@hotmail.com'}
-Registrant{firstName='Garfield', lastName='Abernathy', ssn='691-22-0550', login='GarfieldAbernathy', langKey='null', password='eyG0M4Q^Zb^3Vf', email='willia.witting@hotmail.com'}
-Registrant{firstName='Shantay', lastName='Gaylord', ssn='267-58-1067', login='ShantayGaylord', langKey='null', password='y3AV3#z7bBjQQjzAe', email='russ.dibbert@yahoo.com'}
-Registrant{firstName='Jaimee', lastName='Keeling', ssn='725-35-1767', login='JaimeeKeeling', langKey='null', password='r*z^np5^%KXz%18wUd', email='arminda.lind@yahoo.com'}
-Registrant{firstName='Gudrun', lastName='Hoeger', ssn='198-52-6486', login='GudrunHoeger', langKey='null', password='GCGyIV82D##0a02', email='kimberley.heathcote@yahoo.com'}
-Registrant{firstName='Noel', lastName='Mills', ssn='580-45-6811', login='NoelMills', langKey='null', password='M8aJ8*M05#*26VR', email='annamaria.hermiston@yahoo.com'}
-Registrant{firstName='Rueben', lastName='West', ssn='808-85-2888', login='RuebenWest', langKey='null', password='!1H^mNv9!Td7r%', email='colleen.huels@gmail.com'}
-Registrant{firstName='Ariane', lastName='Champlin', ssn='028-34-6633', login='null', langKey='null', password='vsH&6#TpNMV$mQD4', email='lynetta.bechtelar@yahoo.com'}
-Registrant{firstName='Lionel', lastName='Ritchie', ssn='295-74-0597', login='LionelRitchie', langKey='null', password='r!lN^XohXw*f', email='null'}
-Registrant{firstName='Rosalee', lastName='Gleichner', ssn='302-86-4294', login='RosaleeGleichner', langKey='null', password='$e8@79yvnsN4p2&KAm', email='cindi.fay@gmail.com'}
-Registrant{firstName='Glenn', lastName='Leuschke', ssn='736-25-8913', login='GlennLeuschke', langKey='null', password='KIe&E!%Un6G1GCS3r', email='jane.king@hotmail.com'}
-Registrant{firstName='Earnest', lastName='Wisozk', ssn='833-57-6398', login='EarnestWisozk', langKey='null', password='oXkN962pcg^WH', email='austin.funk@gmail.com'}
-Registrant{firstName='Sophie', lastName='Brekke', ssn='246-83-0040', login='null', langKey='null', password='!OhqwQFB9m^I5p2', email='rene.medhurst@hotmail.com'}
-Registrant{firstName='Marla', lastName='Gibson', ssn='322-52-1894', login='MarlaGibson', langKey='null', password='QFLf7CKzYaQJ$b', email='null'}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=8936, roomNumber=5828, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=7519, roomNumber=6955, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=6237, roomNumber=6478, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=9258, roomNumber=6424, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=9008, roomNumber=6703, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=6162, roomNumber=6410, roomType='DELUXE', status=true}

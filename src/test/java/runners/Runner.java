@@ -17,14 +17,14 @@ import org.junit.runner.RunWith;
 
         glue = {"stepdefinitions","Hooks"},
 
-        tags = "@Appointments_api_validation",
+        tags = "@US_15_Api_test",
 
         dryRun = false
 
 
+
+
 )
-
-
 public class Runner {
 }
 
