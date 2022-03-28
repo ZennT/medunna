@@ -28,9 +28,8 @@ public class RoomCreateUpdateDelete {
     public RoomCreateUpdateDelete() {
     }
 
-    public RoomCreateUpdateDelete(String createdBy, String description,
-                                  int price, int roomNumber,
-                                  String roomType, boolean status) {
+    public RoomCreateUpdateDelete(String createdBy, String description, int price, int roomNumber, String roomType, boolean status) {
+        this.createdBy = createdBy;
         this.description = description;
         this.price = price;
         this.roomNumber = roomNumber;

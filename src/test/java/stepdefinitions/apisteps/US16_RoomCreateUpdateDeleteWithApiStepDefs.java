@@ -99,9 +99,9 @@ public class US16_RoomCreateUpdateDeleteWithApiStepDefs {
     @Then("user validates expected new created room records with Api")
     public void userValidatesExpectedNewCreatedRoomRecordsWithApi() {
         List<String> expectedRoomData = getRoomData();
-        //System.out.println("expected:"+ expectedData);
+        System.out.println("expected:"+ expectedRoomData);
         List<String> actualRoomData = getApiRoomData();
-        //System.out.println("actual: "+actualTestItems);
+        System.out.println("actual: "+actualRoomData);
         Assert.assertTrue(actualRoomData.containsAll(expectedRoomData));
     }
 }

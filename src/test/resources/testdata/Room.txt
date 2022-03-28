@@ -1,3 +1,0 @@
-RoomCreateUpdateDelete{description='this is a test description', id=, price=7005, roomNumber=6520, roomType='DELUXE', status=true}
-RoomCreateUpdateDelete{description='this is a test description', id=, price=6504, roomNumber=5840, roomType='DELUXE', status=true}
-RoomCreateUpdateDelete{description='this is a test description', id=, price=8139, roomNumber=5349, roomType='DELUXE', status=true}

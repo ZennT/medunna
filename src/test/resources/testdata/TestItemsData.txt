@@ -1,3 +1,1 @@
-Marlin test,mg/mL,133,80,130,null
-Arden test,mg/mL,144,80,130,null
-Scott test,mg/mL,110,80,130,null
+Kristian test,mg/mL,139,80,130,null
