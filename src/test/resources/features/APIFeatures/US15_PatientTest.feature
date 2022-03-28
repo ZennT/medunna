@@ -1,7 +1,7 @@
 
 Feature: PatientApiTest
 
-  @US_15_Api_test
+  @US_15_Api_test @EndToEnd
 
   Scenario: patient creation test
     Given user provides the necessary path params

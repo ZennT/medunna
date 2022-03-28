@@ -29,7 +29,7 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
 
     @Given("user is on homepage")
     public void userIsOnHomepage() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("base_url"));
     }
 
 
@@ -38,15 +38,15 @@ public class US02_RegistrationUsernameAndEmailStepDefs {
        Driver.waitAndClick(signInPage.loginDropdown);
     }
 
-//    @And("user clicks on Register button")
-//    public void userClicksOnRegisterButton() {
-//        Driver.waitAndClick(signInPage.registerButton);
-//
-//    }
+    @And("user clicks on Register button")
+    public void userClicksOnRegisterButton() {
+        Driver.waitAndClick(signInPage.registerButton);
+
+    }
 
     @And("user is on registration page and verifies")
     public void userIsOnRegistrationPageAndVerifies() {
-        registrationPage.registrationText.isDisplayed();
+//        registrationPage.registrationText.isDisplayed();
 
     }
 

@@ -114,6 +114,21 @@ public class Hooks {
 
 
 
+    @Before( value = "@Appointments_api_validation")
+    public void setAPI(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -131,6 +146,7 @@ public class Hooks {
 
     }
 
+
     @After
     public void tearDown(Scenario scenario){
 
@@ -144,7 +160,7 @@ public class Hooks {
 
 
 
-//        Driver.closeDriver
+        Driver.closeDriver();
     }
 
 

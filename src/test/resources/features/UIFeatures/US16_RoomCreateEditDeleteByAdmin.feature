@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Admin creates edits deletes room
 
   Scenario: Admin creates a room negative case
@@ -14,7 +15,7 @@ Feature: Admin creates edits deletes room
     And User clicks on Save button
     Then This field is required message appears under required field textbox
 
-    Scenario: Admin creates a room positive case
+#    Scenario: Admin creates a room positive case
     Given User enters room number
       And User chooses TWIN on Room Type dropdown
       And User sets current status by clicking on Status checkbox
@@ -24,7 +25,7 @@ Feature: Admin creates edits deletes room
       And User clicks on Save button
       Then User verifies the room is created successfully
 
-      Scenario: Admin edits and deletes the room
+#      Scenario: Admin edits and deletes the room
         Given User clicks on last page button
         When User clicks on Edit button
         And User updates room number

@@ -1,5 +1,5 @@
 
-@US17_DBTest
+@US17_DBTest @EndToEnd
 Feature: DB Test Items validation
 
   Background: db connection set up

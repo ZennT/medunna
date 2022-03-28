@@ -1,4 +1,4 @@
-@UIPatients
+@UIPatients @RegressionTest
 Feature:  patients feature TC001 and TC002
 
 

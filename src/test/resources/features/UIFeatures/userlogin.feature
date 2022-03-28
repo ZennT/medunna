@@ -1,4 +1,4 @@
-@UIlogin
+@UIlogin @SmokeTest
 
 Feature: user login feature
 

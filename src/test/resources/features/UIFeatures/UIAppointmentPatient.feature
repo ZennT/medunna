@@ -3,7 +3,7 @@ Feature: appointments test
 
 
 
-  @UIAppointment
+  @UIAppointment @RegressionTest
   Scenario Outline: test appointments
     Given user clicks on make an appointment
     And user provides the appointment name "<firstname>"

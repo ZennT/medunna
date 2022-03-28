@@ -73,7 +73,7 @@ public class US_15_newPatientCreationStepdefs {
 
     @Given("system clicks on items&title button")
     public void system_clicks_on_items_title_button() {
-        Driver.wait(1);
+        Driver.wait(6);
         signInPage.itemsTitleButton.click();
 
     }
@@ -159,14 +159,14 @@ public class US_15_newPatientCreationStepdefs {
 
     @Given("system clicks on deleteLastCreated")
     public void system_clicks_on_found_patient() throws IOException {
-        Driver.wait(5);
+        Driver.wait(7);
         Driver.clickElementByJS(signInPage.deleteLastCreated);
-        Driver.wait(5);
-        signInPage.confirmDelete.click();
-        Driver.wait(3);
+        Driver.wait(10);
+        Driver.clickElementByJS(signInPage.confirmDelete);
+        Driver.wait(10);
         Assert.assertTrue(signInPage.deleteMessage.isDisplayed());
-        Driver.wait(3);
-       ReusableMethods.getScreenshot("patient deleted");
+        Driver.wait(7);
+//       ReusableMethods.getScreenshot("patient deleted");
     }
 }
 

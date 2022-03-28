@@ -17,14 +17,14 @@ import org.junit.runner.RunWith;
 
         glue = {"stepdefinitions","Hooks"},
 
-        tags = "@US_15_Api_test",
+        tags = "@RegressionTest",
 
         dryRun = false
 
 
-
-
 )
-public class Runner {
-}
 
+
+
+public class RegressionRunner {
+}

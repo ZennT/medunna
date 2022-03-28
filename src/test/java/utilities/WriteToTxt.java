@@ -1,5 +1,6 @@
 package utilities;
 
+import pages.DoctorAppointment;
 import pojos.*;
 
 import java.io.BufferedWriter;
@@ -137,15 +138,21 @@ public static void saveDBTestItemsData(List<Object> testItems) {
         }
     }
 
-    public static void saveRoomData(RoomCreateUpdateDelete room) {
+
+
+
+    public static void saveApiAppointment(DoctorAppointment doctorAppointment) {
         try {
             //src/resources/testdata/Registrantdata.txt
-            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("room_records"), true);
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("API_doctorAppointment_data"), true);
+
 
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
 
-            writer.append(room + "\n");
+
+            writer.append(doctorAppointment + "\n");
+
 
 
             writer.close();
@@ -157,6 +164,21 @@ public static void saveDBTestItemsData(List<Object> testItems) {
 
 
     }
+    public static void saveRoomData(RoomCreateUpdateDelete room) {
+        try {
+            //src/resources/testdata/Registrantdata.txt
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("room_records"), true);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            writer.append(room + "\n");
+            writer.close();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public static void saveAllRoomData(RoomCreateUpdateDelete[] room) {
         try {

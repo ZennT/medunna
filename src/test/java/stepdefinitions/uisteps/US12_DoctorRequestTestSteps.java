@@ -60,14 +60,14 @@ public class US12_DoctorRequestTestSteps {
 
     @And("doctor clicks on Request A Test button")
     public void doctorClicksOnRequestATestButton() {
+        Driver.wait(6);
         Driver.waitAndClick(doctorRequestTestPage.requestTestButton);
     }
 
     @And("doctor navigates to Test Items page and verifies the page")
     public void doctorNavigatesToTestItemsPageAndVerifiesThePage() {
-        Driver.wait(3);
-        boolean text = doctorRequestTestPage.textOfTestItems.isDisplayed();
-        Assert.assertTrue(text);
+        Driver.wait(6);
+        Assert.assertTrue(doctorRequestTestPage.textOfTestItems.isDisplayed());
 
     }
 

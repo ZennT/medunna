@@ -49,8 +49,12 @@ public class    SignInPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement logInButton;
 
-    @FindBy(xpath = "//*[@id='entity-menu']")
+
+    @FindBy(xpath="//*[contains(text(),'Items&Titles')]")
     public WebElement itemsTitleButton;
+
+//    @FindBy(xpath = "//*[@id='entity-menu']")
+//    public WebElement itemsTitleButton;
 
     @FindBy(xpath = "//*[@id='entity-menu']/div/a[1]")
     public WebElement patients;
