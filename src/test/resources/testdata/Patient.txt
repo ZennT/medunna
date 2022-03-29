@@ -68,7 +68,6 @@ null,null,null,dominique.eichmann@gmail.comnull,1234567889
 null,null,null,addison.oconnell@yahoo.comnull,1234567889
 null,null,null,nyasia.aufderhar@gmail.comnull,1234567889
 null,null,null,immanuel.schamberger@yahoo.comnull,1234567889
-null,null,null,coby.beer@yahoo.comnull,1234567889
 null,null,null,travis.jakubowski@yahoo.comnull,973-212-4556
 null,null,null,elna.bahringer@gmail.comBnegative,4387221874
 null,null,null,randy.heaney@yahoo.comBnegative,4387221874
@@ -77,6 +76,7 @@ null,null,null,wan.botsford@hotmail.comAnegative,5712311234
 null,null,null,jeane.jast@yahoo.comAnegative,5712311234
 null,null,null,LemanYagublu@gmail.comAnegative,5712311234
 null,null,null,ronny.carroll@yahoo.comBnegative,4387221874
+null,null,null,collin.crooks@yahoo.comBnegative,4387221874
 null,null,null,myrtie.cronin@hotmail.comnull,1234567889
 null,null,null,omer.block@gmail.comnull,1234567889
 null,null,null,malinda.muller@gmail.comnull,1234567889
@@ -996,5 +996,5 @@ null,null,null,levi.lowe@hotmail.comApositive,1125480725
 null,null,null,joaquina.lehner@gmail.comApositive,6861326027
 null,null,null,elvis.hayes@yahoo.comApositive,1409297538
 null,null,null,allen.johnson@gmail.comnull,1466664868
-null,null,null,wilton.ruecker@hotmail.comBnegative,4387221874
+null,null,null,roy.mcdermott@gmail.comBnegative,4387221874
 null,null,null,shizue.johnson@gmail.comnull,4756967641
