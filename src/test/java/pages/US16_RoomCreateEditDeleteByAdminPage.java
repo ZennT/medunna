@@ -37,7 +37,7 @@ public class US16_RoomCreateEditDeleteByAdminPage {
     @FindBy(xpath ="(//*[text()='This field is required.'])[2]" )
     public WebElement fieldRequiredPrice;
 
-    @FindBy(xpath = "//input[@id='room-roomNumber']")
+    @FindBy(xpath = "//input[@name='roomNumber']")
     public WebElement roomNumberTextBox;
 
     @FindBy(xpath = "//input[@id='room-price']")

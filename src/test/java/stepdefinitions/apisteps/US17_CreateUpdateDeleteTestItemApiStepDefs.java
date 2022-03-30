@@ -108,9 +108,9 @@ public class US17_CreateUpdateDeleteTestItemApiStepDefs {
     @Then("user validates expected test item records with Api")
     public void user_validates_expected_test_item_records_with_api() {
         List<String> expectedData = getTestItemNames();
-        //System.out.println("expected:"+ expectedData);
+        System.out.println("expected:"+ expectedData);
         List<String> actualTestItems = getApiTestItemNames();
-        //System.out.println("actual: "+actualTestItems);
+        System.out.println("actual: "+actualTestItems);
         Assert.assertTrue(actualTestItems.containsAll(expectedData));
 
 

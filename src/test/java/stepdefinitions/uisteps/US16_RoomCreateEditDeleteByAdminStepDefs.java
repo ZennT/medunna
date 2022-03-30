@@ -81,13 +81,15 @@ public class US16_RoomCreateEditDeleteByAdminStepDefs {
 
     @Given("User enters room number")
     public void userEntersRoomNumber() {
+        Driver.wait(5);
 
-        roomCreate.roomNumberTextBox.clear();
+       // roomCreate.roomNumberTextBox.clear();
         roomCreate.roomNumberTextBox.sendKeys(faker.number().digits(4));
     }
 
     @And("User enters price")
     public void userEntersPrice() {
+        Driver.wait(3);
         //Driver.waitAndSendText(roomCreate.priceTextBox,"500");
         roomCreate.priceTextBox.sendKeys(faker.number().digits(3));
     }

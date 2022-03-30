@@ -1,4 +1,4 @@
-@UIAppointment
+@UIAppointment @RegressionTest
 Feature: test of doctor request test
 
 
