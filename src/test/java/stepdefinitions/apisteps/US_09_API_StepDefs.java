@@ -29,7 +29,7 @@ public class US_09_API_StepDefs {
     public void send_the_get_request_and_get_the_response() {
         response = given().headers("Authorization", "Bearer " +generateToken(),
                         "Content-Type", ContentType.JSON, "Accept", ContentType.JSON).when().
-                get(ConfigurationReader.getProperty("patient_endpoint"));
+                get(ConfigurationReader.getProperty("patients_endpoint"));
 
          /*  BASIC AUTHENTICATION.
         @When("send the GET request and get the response")
