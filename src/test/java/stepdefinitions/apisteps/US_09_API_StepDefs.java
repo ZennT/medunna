@@ -22,16 +22,16 @@ public class US_09_API_StepDefs {
     @When("set the Base Url")
     public void set_the_base_url() {
         RequestSpecification spec=new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
-        spec.pathParams("1","api","2","patients","3",4860);
+        spec.pathParams("1","api","2","patients");
 
     }
     @When("send the GET request and get the response")
     public void send_the_get_request_and_get_the_response() {
         response = given().headers("Authorization", "Bearer " +generateToken(),
                         "Content-Type", ContentType.JSON, "Accept", ContentType.JSON).when().
-                get(ConfigurationReader.getProperty("patient_endpoint"));
+                get(ConfigurationReader.getProperty("patients_endpoint"));
 
-         /*
+         /*  BASIC AUTHENTICATION.
         @When("send the GET request and get the response")
 public void send_the_get_request_and_get_the_response() {
     RequestSpecification spec=new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
@@ -47,6 +47,7 @@ public void send_the_get_request_and_get_the_response() {
         expectedData.put("firstName","John");
         expectedData.put("lastName","Doe");
         expectedData.put("email","john@doe.com");
+        expectedData.put("bloodGroup","Anegative");
     }
     @Then("do validation")
     public void do_validation() {
@@ -55,5 +56,6 @@ public void send_the_get_request_and_get_the_response() {
         assertEquals(expectedData.get("firstName"),actualData.get("firstName"));
         assertEquals(expectedData.get("lastName"),actualData.get("lastName"));
         assertEquals(expectedData.get("email"),actualData.get("email"));
+        //dskd
     }
 }
