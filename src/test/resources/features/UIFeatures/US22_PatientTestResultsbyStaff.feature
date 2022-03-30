@@ -1,4 +1,4 @@
-@TestResult
+@TestResult @RegressionTest
 Feature: Staff feature
 
   Scenario Outline: Staff login and search patient by SSN

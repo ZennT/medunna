@@ -219,6 +219,49 @@ public class ReadTxt {
 
 
 
+    public static List<String> getRoomData(){
+        List<String> list=new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("room_records"));
+            // we are reading the records of the file in given location here
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+
+
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    public static List<String> getApiRoomData(){
+        List<String> list=new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("room_records"));
+            // we are reading the records of the file in given location here
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+
+
+
 
 
 

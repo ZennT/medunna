@@ -1,4 +1,4 @@
-@UIRegistrationPage @smoke @UIHome
+@UIHome @UIRegistrationPage @smoke @SmokeTest
 Feature: registration feature
 
   Background: user is on the registration page
@@ -19,7 +19,7 @@ Feature: registration feature
     Then user sets the data in correspondent files
     Examples:
       | ssn         | firstname | lastname | username    | email           | password   |
-      | 170-98-8790 | New User  | last     | hel.ly_can1 | molly6@gmail.com | mollyA123. |
+      | 170-90-8790 | New User  | last     | hel.ly_can1 | moly6@gmail.com | mollyA123. |
 
   @UIRegistration_US002_TC0005 @smoke
   Scenario Outline: user should not able register with Username that already used

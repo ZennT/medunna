@@ -1,3 +1,4 @@
+
 package runners;
 
 import io.cucumber.junit.Cucumber;
@@ -17,17 +18,13 @@ import org.junit.runner.RunWith;
 
         glue = {"stepdefinitions","Hooks"},
 
-
-        tags = "@US_15_Api_test",
-
-
+        tags = "@SmokeTest",
 
         dryRun = false
 
 
-
-
 )
-public class Runner {
-}
 
+
+public class SmokeRunner {
+}

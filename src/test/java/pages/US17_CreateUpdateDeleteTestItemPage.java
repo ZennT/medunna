@@ -34,8 +34,11 @@ public class US17_CreateUpdateDeleteTestItemPage {
         @FindBy(xpath = "//h1[text()='Welcome to MEDUNNA']")
         public WebElement homeText;
 
-        @FindBy(xpath = "(//li[@id='entity-menu'])[1]")
+
+        @FindBy(xpath="//*[contains(text(),'Items&Titles')]")
         public WebElement itemsTitles;
+//        @FindBy(xpath = "(//li[@id='entity-menu'])[1]")
+//        public WebElement itemsTitles;
 
         @FindBy(xpath = "(//a[@role='menuitem'])[5]")
         public WebElement testItem;
