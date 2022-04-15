@@ -1,10 +1,7 @@
 package utilities;
 
 import pages.DoctorAppointment;
-import pojos.Appointment;
-import pojos.CreateUpdateDeleteTestItem;
-import pojos.NewPatientCreation;
-import pojos.Registrant;
+import pojos.*;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -162,7 +159,9 @@ public static void saveDBTestItemsData(List<Object> testItems) {
         }
 
 
-    }
+
+
+        }
 
 
 

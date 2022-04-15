@@ -1,5 +1,6 @@
 package stepdefinitions.apisteps;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.builder.RequestSpecBuilder;
@@ -56,4 +57,6 @@ public void send_the_get_request_and_get_the_response() {
         assertEquals(expectedData.get("lastName"),actualData.get("lastName"));
         assertEquals(expectedData.get("email"),actualData.get("email"));
     }
+
+
 }

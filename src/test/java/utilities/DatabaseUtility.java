@@ -1,10 +1,7 @@
 package utilities;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DatabaseUtility {
     private static Connection connection;
@@ -220,6 +217,14 @@ public class DatabaseUtility {
                 max=num;
         }
         return max;
+    }
+
+    public static List<Long>  getResult() throws SQLException {
+        List<Long> allRoomsIds= new ArrayList<>();
+        while (resultSet.next()){
+        allRoomsIds.add((long)resultSet.getObject("id"));
+        }
+          return allRoomsIds;
     }
     public static Object getCellValuewithRowsAndCells(String query,int row,int cell) {
         return getQueryResultList(query).get(row).get(cell);
