@@ -10,6 +10,7 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import pojos.RoomCreateUpdateDelete;
 import utilities.ConfigurationReader;
+import utilities.WriteToTxt;
 
 import java.io.IOException;
 import java.util.List;
@@ -29,6 +30,7 @@ public class US16_RoomCreateUpdateDeleteWithApiStepDefs {
     Response response;
     RoomCreateUpdateDelete[] roomCreateUpdateDelete;
     Faker faker = new Faker();
+    int createdRoomId;
 
 
     @Given("user sets path params to create room")
@@ -73,6 +75,8 @@ public class US16_RoomCreateUpdateDeleteWithApiStepDefs {
         assertEquals(room.getRoomNumber(), actualData.getRoomNumber());
         assertEquals(room.getRoomType(), actualData.getRoomType());
         assertEquals(room.isStatus(), actualData.isStatus());
+
+        createdRoomId = actualData.getId();
     }
 
 
@@ -98,10 +102,13 @@ public class US16_RoomCreateUpdateDeleteWithApiStepDefs {
 
     @Then("user validates expected new created room records with Api")
     public void userValidatesExpectedNewCreatedRoomRecordsWithApi() {
+
         List<String> expectedRoomData = getRoomData();
-        System.out.println("expected:"+ expectedRoomData);
+        System.out.println("expected:"+ expectedRoomData);// bizim olusturdugumuz bilgi
+
         List<String> actualRoomData = getApiRoomData();
-        System.out.println("actual: "+actualRoomData);
+        System.out.println("actual: "+actualRoomData); // databasedeki butun bilgiler
+
         Assert.assertTrue(actualRoomData.containsAll(expectedRoomData));
     }
 }

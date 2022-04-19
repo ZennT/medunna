@@ -12,6 +12,8 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import java.io.IOException;
 
+import static utilities.Driver.closeDriver;
+
 
 public class LoginStepDefs {
 
@@ -100,8 +102,8 @@ public class LoginStepDefs {
 
     }
     @Then("user should see the newMessage")
-    public void user_should_see_the_new_message() {
-        Driver.wait(1);
+    public void user_should_see_the_new_message() throws InterruptedException {
+        wait(1);
         Assert.assertTrue(loginPage.checkMailMessage.isDisplayed());
     }
     @Given("User  enter before rememberMe button")
@@ -112,6 +114,7 @@ public class LoginStepDefs {
     public void user_see_register_new_account_button() {
         Driver.wait(1);
         Assert.assertTrue(loginPage.registerNewAccount.isDisplayed());
+//        closeDriver();
 
     }
 

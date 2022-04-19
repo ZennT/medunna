@@ -17,10 +17,13 @@ import org.junit.runner.RunWith;
 
         glue = {"stepdefinitions","Hooks"},
 
-        tags = "@US_15_Api_test",
+        tags = "@RoomApi",
 
         dryRun = false
 
+        // tags = "@wip and not @smoke"      @wip @smoke    --> wip (altinda smoke tag varsa onlari calistirma)
+        // tags = "@wip and @smoke"          @wip @smoke    --> wip ve smoke beraber olan feature lar calisir, tek basina wip veya tek basina smoke olanlar calismaz
+        // tags = "@wip or @smoke"           @wip veya @smoke  ikisinden birine sahip olan feature lar calisir
 
 
 

@@ -259,6 +259,72 @@ public class ReadTxt {
         return list;
     }
 
+    public static List<String> getRoomApiData(){
+        List<String> list=new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("room_api_records"));
+            // we are reading the records of the file in given location here
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+
+
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    // yeni olusturulan room records icin
+    public static List<String> getRoomApiiData(){
+        List<String> list=new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("room_api_records"));
+            // we are reading the records of the file in given location here
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+
+
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    // databasedeki tum room recordlari icin
+    public static List<String> getApiiRoomData(){
+        List<String> list=new ArrayList<>();
+        try {
+            //We are just identifying file location to read
+            FileReader fileReader=new FileReader(ConfigurationReader.getProperty("allRooms_records"));
+            // we are reading the records of the file in given location here
+            BufferedReader br=new BufferedReader(fileReader);
+            String line=br.readLine();
+            while (line !=null){
+                String name=line.split(",")[0];
+                list.add(name);
+                line=br.readLine();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+
+
+
 
 
 

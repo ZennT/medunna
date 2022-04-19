@@ -1,0 +1,15 @@
+RoomApi{createdBy='admin79', description='this is a test room description', price=5000.5, roomNumber=5770, roomType='TWIN', status=true}
+RoomApi{createdBy='admin79', description='this is a test room description', price=5000.5, roomNumber=5770, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='admin79', description='this is a test room description', price=5000.5, roomNumber=5370, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='admin79', description='this is a test room description', price=5000.5, roomNumber=5370, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='admin79', description='this is a test room description', price=5000.5, roomNumber=5270, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=5170, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=5170, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=5070, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=5070, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=3070, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=1070, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=1066, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=1057, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=3057, roomType='TWIN', statusstatus=true}
+RoomApi{createdBy='null', description='this is a test room description', price=5000.5, roomNumber=3089, roomType='TWIN', statusstatus=true}

@@ -56,6 +56,8 @@ public class Driver {
         return driver;
     }
 
+
+
     public static void closeDriver() {
         if (driver != null) {//if the driver is pointing chrome
             driver.quit();//quit the driver

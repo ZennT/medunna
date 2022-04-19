@@ -198,4 +198,38 @@ public static void saveDBTestItemsData(List<Object> testItems) {
         }
     }
 
+    public static void saveNewRoomData(RoomCreateUpdateDelete room) {
+        try {
+            //we make it FALSE because we will update all data whenever we make a get request for all.
+            // Every time we will get all data
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("room_All_records"), false);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            writer.append(room.getCreatedBy() + "," + room.getDescription() + "," +
+                        room.getPrice() + "," + room.getRoomNumber() + "," +
+                        room.getRoomType() + "," + room.isStatus() + "\n");
+
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    public static void saveRoomApiData(RoomApiRequest roomApi) {
+        try {
+            //src/resources/testdata/Registrantdata.txt
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("room_api_records"), true);
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            writer.append(roomApi + "\n");
+            writer.close();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

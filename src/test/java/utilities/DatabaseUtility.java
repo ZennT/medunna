@@ -12,9 +12,12 @@ public class DatabaseUtility {
     private static ResultSet resultSet;
 
     public static void createConnection() {
-        String url = ConfigurationReader.getProperty("database_url");
-        String user = ConfigurationReader.getProperty("database_user");
-        String password = "Techpro_@126";
+//        String url = ConfigurationReader.getProperty("database_url");
+//        String user = ConfigurationReader.getProperty("database_user");
+//        String password = "Techpro_@126";
+        String url = ConfigurationReader.getProperty("db_credentials_url");
+        String user = ConfigurationReader.getProperty("db_username");
+        String password = ConfigurationReader.getProperty("db_password");
 
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -89,6 +92,27 @@ public class DatabaseUtility {
      * @return returns query result in a list of lists where outer list represents
      *         collection of rows and inner lists represent a single row
      */
+
+
+    /*
+    *
+    * Person
+    * id | firstName| lastName | age | salary
+    * 1   Ahmet         h        10     1000
+    * 2   Mehmet         t        30    1000
+    *
+    *
+    * select * from Person where id = 1;
+    *
+    * [
+        * [1,Ahmet,h,t,10,1000],
+        * [2,Mehmet,t,30,1000]
+    * ]
+    *
+    * 1   Ahmet         h        10     1000
+    *
+    *
+    * */
     public static List<List<Object>> getQueryResultList(String query) {
         executeQuery(query);
         List<List<Object>> rowList = new ArrayList<>();
@@ -176,6 +200,17 @@ public class DatabaseUtility {
         }
         return columns;
     }
+
+
+    public static List<Long> getResult() throws SQLException {
+        List<Long> allRoomIds = new ArrayList<>();
+        while (resultSet.next()){
+              allRoomIds.add((long)resultSet.getObject("id"));
+        }
+
+        return allRoomIds;
+    }
+
     public static void executeQuery(String query) {
         try {
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
