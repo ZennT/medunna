@@ -19,7 +19,7 @@ import org.junit.runner.RunWith;
 
         tags = "@RoomApi",
 
-        dryRun = false
+        dryRun = false     // true olursa eksik stepleri gosteriyor
 
         // tags = "@wip and not @smoke"      @wip @smoke    --> wip (altinda smoke tag varsa onlari calistirma)
         // tags = "@wip and @smoke"          @wip @smoke    --> wip ve smoke beraber olan feature lar calisir, tek basina wip veya tek basina smoke olanlar calismaz

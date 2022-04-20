@@ -12,6 +12,7 @@ import pojos.RoomApiRequest;
 import pojos.RoomApiResponse;
 import utilities.ApiUtils;
 import utilities.ConfigurationReader;
+import utilities.Driver;
 
 import java.io.IOException;
 import java.util.List;
@@ -111,6 +112,7 @@ public class RoomApiStepDefs {
 
     @Then("send put request to update room type")
     public void sendPutRequestToUpdateRoomType() {
+
 
         actualRoomApi.setRoomType("DELUXE");
         response = ApiUtils.putRequest(generateToken(),ConfigurationReader.getProperty("room_endpoint"),actualRoomApi);

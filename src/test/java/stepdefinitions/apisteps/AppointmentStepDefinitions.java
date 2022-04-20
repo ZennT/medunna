@@ -7,6 +7,8 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.commons.collections4.bidimap.TreeBidiMap;
+import org.junit.Assert;
+import pojos.AppointmentResponse;
 import utilities.ConfigurationReader;
 
 import java.util.*;
@@ -19,6 +21,7 @@ public class AppointmentStepDefinitions  {
 
     Map<String, String> requestBody;
     Response response;
+    AppointmentResponse appointmentResponse;
 
 
 
@@ -52,5 +55,11 @@ public class AppointmentStepDefinitions  {
 
     @Then("user validates appointment")
     public void userValidatesAppointment() {
+
+        appointmentResponse =response.then().extract().as(AppointmentResponse.class);
+
+        System.out.println("response from appointment request endpoint: " + appointmentResponse);
+
+        Assert.assertEquals("125-45-8765",appointmentResponse.patient.user.ssn);
     }
 }
