@@ -9,6 +9,7 @@ import pojos.*;
 import javax.swing.text.AbstractDocument;
 import java.util.Map;
 
+import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 
 public class ApiUtils {
@@ -22,12 +23,27 @@ public class ApiUtils {
                 "Content-Type",
                 ContentType.JSON,
                 "Accept",
-                ContentType.JSON).when().get(endpoint);
+                ContentType.JSON).when().get(endpoint);  // with or without 3rd contenttype.JSON after headers, it works
 
 
         return response;
 
     }
+
+//    public static Response getRequest1(String token) {
+//
+//        Response response = given().headers(
+//                "Authorization",
+//                "Bearer " + token,
+//                "Content-Type",
+//                ContentType.JSON,
+//                "Accept",
+//                ContentType.JSON).spec(spec).when().get("/{first}/{second}/{third}");
+//
+//
+//        return response;
+//
+//    }
 
     public static Response postRequestTestItem(String token, String endpoint, CreateUpdateDeleteTestItem createUpdateDeleteTestItem) {
 
@@ -66,7 +82,7 @@ public class ApiUtils {
                 "Content-Type",
                 ContentType.JSON,
                 "Accept",
-                ContentType.JSON).contentType(ContentType.JSON).when().delete(endpoint);
+                ContentType.JSON).when().delete(endpoint); // with or without 3rd contenttype.JSON after headers, it works
 
         response.prettyPrint();
         return  response;
@@ -103,7 +119,7 @@ public class ApiUtils {
 
     public static Response postRequestRoomApi(String token, String endpoint, RoomApiRequest roomApi) {
 
-        Response response = given().headers(
+        Response response = given().headers(       // headers token almak icin kullanilir
                 "Authorization",
                 "Bearer " + token,
                 "Content-Type",
@@ -116,6 +132,9 @@ public class ApiUtils {
 
         return response;
     }
+
+
+
 
     public static Response postRequestRoomApi(String token, String endpoint, Map<String,String> requestBody) {
 

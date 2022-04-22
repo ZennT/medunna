@@ -6,7 +6,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 import pojos.RoomApiRequest;
 import pojos.RoomApiResponse;
@@ -19,25 +21,27 @@ import java.util.List;
 
 import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
-import static utilities.ApiUtils.postRequestRoomApi;
+import static utilities.ApiUtils.*;
 import static utilities.Authentication.generateToken;
 import static utilities.ReadTxt.*;
 import static utilities.WriteToTxt.saveRoomApiData;
 
 public class RoomApiStepDefs {
 
+
     RoomApiRequest roomApi = new RoomApiRequest();
     Response response;
     Faker faker = new Faker();
-    RoomApiResponse actualRoomApi;
+    RoomApiResponse actualRoomApi;  // postUpdatedRoom
     int createdRoomID;
-    RoomApiResponse updatedRoom;
+    RoomApiResponse updatedRoom;     // putUpdatedRoom
 
 
     @Given("user sets base url for room creation")
     public void userSetsBaseUrlForRoomCreation() {
-
+//        spec = new RequestSpecBuilder().setBaseUri("https://medunna.com").build();
         spec.pathParams("first","api","second","rooms"); // https://medunna.com/api/rooms
+
     }
 
     @When("user sets the expected room data")
@@ -67,7 +71,7 @@ public class RoomApiStepDefs {
     @Then("user validates room data")
     public void userValidatesRoomData() throws IOException {
 
-        response.then().statusCode(201);
+        response.then().statusCode(201); // validation
 
         System.out.println("time " + response.getTime());
 
@@ -101,21 +105,34 @@ public class RoomApiStepDefs {
 
     @Then("send get request to validate created room")
     public void sendGetRequestToValidateCreatedRoom() {
-        String endpoint = "https://medunna.com/api/rooms/" + createdRoomID;
-        response = ApiUtils.getRequest(generateToken(),endpoint);
 
+        String endpoint = "https://medunna.com/api/rooms/" + createdRoomID;
+        response = getRequest(generateToken(),endpoint);
         response.then().statusCode(200);
 
 
+//        spec.pathParams("first","api","second","rooms","third",54523);
+//        response = getRequest1(generateToken());
+
+
+//        spec.pathParams("parameter1","1","parametre2","boards","parametre3",id,"parametre4",fieldName);
+//
+//        RequestPOJO requestPOJO = new RequestPOJO(ConfigReader.getProperty("key"),ConfigReader.getProperty("token"));
+//        response = given().
+//                contentType(ContentType.JSON).
+//                spec(spec).
+//                body(requestPOJO).
+//                when().get("{parameter1}/{parametre2}/{parametre3}/{parametre4}");
 
     }
+
 
     @Then("send put request to update room type")
     public void sendPutRequestToUpdateRoomType() {
 
 
         actualRoomApi.setRoomType("DELUXE");
-        response = ApiUtils.putRequest(generateToken(),ConfigurationReader.getProperty("room_endpoint"),actualRoomApi);
+        response = ApiUtils.putRequest(generateToken(),ConfigurationReader.getProperty("room_endpoint") ,actualRoomApi);
 
         /*
         * put request sonrasi donen object json oldugu icinonu java object e cevirmemiz gerekiyor.
@@ -135,7 +152,7 @@ public class RoomApiStepDefs {
     @Then("send get request to validate updated room")
     public void sendGetRequestToValidateUpdatedRoom() {
         String endpoint = "https://medunna.com/api/rooms/" + createdRoomID;
-        response = ApiUtils.getRequest(generateToken(),endpoint);
+        response = getRequest(generateToken(),endpoint);
 
         response.then().statusCode(200);
         System.out.println("Update room validation - GET request");
@@ -155,7 +172,7 @@ public class RoomApiStepDefs {
     @Then("send get request to validate the room is deleted")
     public void sendGetRequestToValidateTheRoomIsDeleted() {
         String endpoint = "https://medunna.com/api/rooms/" + createdRoomID;
-        response = ApiUtils.getRequest(generateToken(),endpoint);
+        response = getRequest(generateToken(),endpoint);
 
         response.then().statusCode(404);
         System.out.println("Delete room validation - GET request");

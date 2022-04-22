@@ -1,12 +1,17 @@
 package pojos;
 
+//import lombok.*;
+
 import lombok.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
+@Data
+
+//@Getter
+//@Setter
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@ToString
+
 public class RoomApiResponse {
     private String createdDate;
     private String createdBy;
