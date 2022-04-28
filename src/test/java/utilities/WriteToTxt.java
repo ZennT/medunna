@@ -88,7 +88,6 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
-
     public static void saveAllTestItems(CreateUpdateDeleteTestItem[] createUpdateDeleteTestItem) {
         try {
             //we make it FALSE because we will update all data whenever we make a get request for all.
@@ -106,8 +105,6 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
-
-
     public static void savePatientData(NewPatientCreation[] np){
         try{
             //src/resources/testdata/Registrantdata.txt
@@ -122,8 +119,7 @@ public class WriteToTxt {
             e.printStackTrace();
         }
     }
-
-public static void saveDBTestItemsData(List<Object> testItems) {
+    public static void saveDBTestItemsData(List<Object> testItems) {
         try {
             //we make it FALSE to add updated data
             FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("DB_testItems_data"), false);
@@ -137,10 +133,6 @@ public static void saveDBTestItemsData(List<Object> testItems) {
             e.printStackTrace();
         }
     }
-
-
-
-
     public static void saveApiAppointment(DoctorAppointment doctorAppointment) {
         try {
             //src/resources/testdata/Registrantdata.txt
@@ -164,15 +156,19 @@ public static void saveDBTestItemsData(List<Object> testItems) {
 
 
     }
+
+
+
+
     public static void saveRoomData(RoomCreateUpdateDelete room) {
         try {
             //src/resources/testdata/Registrantdata.txt
             FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("room_records"), true);
+
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
             writer.append(room + "\n");
             writer.close();
-
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -188,9 +184,7 @@ public static void saveDBTestItemsData(List<Object> testItems) {
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
             for (int i = 0; i < room.length; i++) {
-                writer.append(room[i].getCreatedBy() + "," + room[i].getDescription() + "," +
-                        room[i].getPrice() + "," + room[i].getRoomNumber() + "," +
-                        room[i].getRoomType() + "," + room[i].isStatus() + "\n");
+                writer.append(room[i] + "\n");
             }
             writer.close();
         } catch (Exception e) {

@@ -93,6 +93,7 @@ public class US16_RoomCreateUpdateDeleteWithApiStepDefs {
 
     }
 
+
     @And("user saves room data to correspondent file")
     public void userSavesRoomDataToCorrespondentFile() {
         saveAllRoomData(roomCreateUpdateDelete);
@@ -103,12 +104,13 @@ public class US16_RoomCreateUpdateDeleteWithApiStepDefs {
     @Then("user validates expected new created room records with Api")
     public void userValidatesExpectedNewCreatedRoomRecordsWithApi() {
 
-        List<String> expectedRoomData = getRoomData();
+//        List<String> expectedRoomData = getRoomData();
+        String expectedRoomData = getRoomData();
         System.out.println("expected:"+ expectedRoomData);// bizim olusturdugumuz bilgi
 
         List<String> actualRoomData = getApiRoomData();
         System.out.println("actual: "+actualRoomData); // databasedeki butun bilgiler
 
-        Assert.assertTrue(actualRoomData.containsAll(expectedRoomData));
+        Assert.assertTrue(actualRoomData.contains(expectedRoomData));
     }
 }
