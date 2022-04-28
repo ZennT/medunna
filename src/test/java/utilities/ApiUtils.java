@@ -151,7 +151,7 @@ public class ApiUtils {
 
         return response;
     }
-}
+
 
 //     String  endpoint ="https://medunna.com/api/appointments/request";
 //      response = given().headers(
@@ -161,3 +161,20 @@ public class ApiUtils {
 //                ContentType.JSON,
 //                "Accept",
 //                ContentType.JSON).contentType(ContentType.JSON).body(expectedAppointmentCreate).when().post(endpoint);
+
+    public static Response postRequestRoomApiSecond(String token, String endpoint, Map<String,Object> createdRoomData) {
+
+        Response response = RestAssured.given().headers(
+                "Authorization",
+                "Bearer " + token,
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).body(createdRoomData).when().post(endpoint);
+        // ilk content type.JSON --> bearer token ile ilgili
+        // ikincisi  de response type
+
+
+        return response;
+    }
+}

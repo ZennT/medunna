@@ -114,6 +114,16 @@ public class Hooks {
 
     }
 
+    @Before( value = "@RoomApiSecond")
+    public void setupRoomApiSecond(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
+
 
 
 
