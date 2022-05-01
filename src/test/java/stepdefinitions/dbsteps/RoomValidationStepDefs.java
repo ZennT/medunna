@@ -1,5 +1,6 @@
 package stepdefinitions.dbsteps;
 
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -21,6 +22,7 @@ public class RoomValidationStepDefs {
     RoomApiRequest roomApi = new RoomApiRequest();
     Response response;
     int roomID;
+    Faker faker = new Faker();
 
     @Given("create room by using post request")
     public void createRoomByUsingPostRequest() {
@@ -29,7 +31,7 @@ public class RoomValidationStepDefs {
 
         roomApi.setDescription("this is a test room description");
         roomApi.setRoomType("TWIN");
-        roomApi.setRoomNumber(30774);
+        roomApi.setRoomNumber(faker.number().numberBetween(5000,10000));
         roomApi.setPrice(5000.50);
         roomApi.setStatus(true);
 
@@ -37,7 +39,7 @@ public class RoomValidationStepDefs {
         response.prettyPrint();
 
 
-        roomID = response.then().extract().path("id");
+        roomID = response.then().extract().path("id"); //deserialization
         System.out.println("RoomID: " + roomID);
     }
 

@@ -8,3 +8,5 @@ Feature: Room api study
     And  User validates the new room
     And  User sends get request to reach newly created room
     And  User sends put request to update new room
+   Then User deletes created room
+   Then User verifies that created room is deleted
