@@ -4,15 +4,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 import static utilities.DBUtils.closeConnection;
-import static utilities.DataBaseUtils.*;
-import static utilities.ReadTxt.getSSNIDs;
-import static utilities.WriteToTXT.saveAllDBRegistrationData;
-import static utilities.WriteToTXT.saveDBRegistrationData;
+import static utilities.DatabaseUtility.createConnection;
+import static utilities.DatabaseUtility.getColumnData;
 
 public class DBRegistration_emailSetpDefs {
 
@@ -78,79 +75,7 @@ public class DBRegistration_emailSetpDefs {
         }
 }
 
-/*
 
-
-
-    @And("user saves the DB records in to txt file")
-        public void userSavesTheDBRecordsInToTxtFile() {
-           // System.out.println(getColumnData("select email from jhi_user", "email"));
-           // System.out.println(getColumnData("Select last_modified_by, id from  appointment Where last_modified_by = 'doctor79'", "last_modified_by"));
-
-//            saveDBRegistrationData(allDBEmails);
-//            saveDBRegistrationData(allDBSSns);
-//            saveDBRegistrationData(allDBusername);
-        }
-
-//        List<Object> allDBEmails;  // to see it all step we move it here in class level.
-//        List<Object> allDBSSns;
-//        List<Object> allDBusername;
-List<Object>  allActualData;
-        RegistrantPojo registrantpojo = new RegistrantPojo();
-
-
-        @Given("user creates a connection with DB")
-        public void userCreatesAConnectionWithDB() {
-        //    DataBaseUtils.createConnection();    //=> connectuoni direk DataBaseutils ten hazir method ile de alabiliriz yada
-            createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
-        }
-
-
-        @And("user selects all {string} column data")
-        public void userSelectsAllColumnData(String email) {
-            allActualData=getColumnData("select * from jhi_user", email);
-            System.out.println("All Email from DB : " + allActualData);
-        }
-
-        @And("user selects all ssn {string} column data")
-        public void userSelectsAllSsnColumnData(String ssn) {
-            allActualData=getColumnData("select * from jhi_user", ssn);
-            System.out.println("All Ssn from DB : " +  allActualData);
-        }
-
-        @And("user selects all username {string} column data")
-        public void userSelectsAllUsernameColumnData(String login) {
-            allActualData=getColumnData("select * from jhi_user", login);
-            System.out.println("All Username from DB : " +  allActualData);
-    }
-        @And("user saves the DB records in to txt file")
-        public void userSavesTheDBRecordsInToTxtFile() {
-        //    System.out.println(getColumnData("select email from jhi_user", "email"));
-           // System.out.println(getColumnData("Select * FROM jhi_user Where email='anonymous@localhost'"));
-           // System.out.println(getColumnData("Select last_modified_by, id from  appointment Where last_modified_by = 'doctor79'", "last_modified_by"));
-//           saveDBRegistrationData(allDBEmails);
-//            saveDBRegistrationData(allDBSSns);
-//            saveDBRegistrationData(allDBusername);
-            saveAllDBRegistrationData( allActualData);
-        }
-
-    @Then("user validates registrant {string} with the database")
-    public void userValidatesRegistrantWithTheDatabase(String email) {
-        assertTrue( allActualData.contains(email));
-
-    }
-
-    @Then("user validates registrant ssn {string} ids with the database")
-    public void userValidatesRegistrantSsnIdsWithTheDatabase(String ssn) {
-        assertTrue( allActualData.contains(ssn));
-
-    }
-
-    @Then("user validates registrant username {string} with the database")
-    public void userValidatesRegistrantUsernameWithTheDatabase(String username) {
-        assertTrue( allActualData.contains(username));
-    }
- */
 
 
 
