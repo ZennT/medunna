@@ -5,6 +5,10 @@ import io.restassured.response.Response;
 import pojos.CreateUpdateDeleteTestItem;
 import pojos.RoomApiRequest;
 import pojos.RoomApiResponse;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 
 public class ApiUtils {
@@ -83,5 +87,32 @@ public class ApiUtils {
 
     }
 
+    public static Response postRequestRoomApiSecond(String token, String endpoint, Map<String,Object> createdRoomData) {
+        Response response = given().headers(
+                "Authorization",
+                "Bearer " + token,
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).contentType(ContentType.JSON).body(createdRoomData).when().post(endpoint);
 
+        response.prettyPrint();
+        return response;
+
+
+    }
+
+    public static Response putRequestRoomSecond(String token, String endpoint, Map<String,Object> actualRoomData) {
+
+        Response response = given().headers(
+                "Authorization",
+                "Bearer " + token,
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON).contentType(ContentType.JSON).body(actualRoomData).when().put(endpoint);
+
+        response.prettyPrint();
+        return response;
+    }
 }

@@ -42,6 +42,16 @@ public class RegistrantDBSteps {
 
     }
 
-
+/**
+ * post --> create --> post ile veri gonderdigimiz database'e ekliyor.
+ * put --> update
+ * oop concept in your framework --> static method class name/ object olusturma / parent-child ile classlar arasi siniflar arasi bag kuruyoruz.
+ * selenium webdriver bir interface ve full abstract, driver utilde switch case kodlariy;a interfaceden subclasslara ulastik(firefox-chromedriver)
+ * alt classlar selnium webdriver ozeligini aliyorlar cunku o parent, polymorphisim oluyor, hatta override da louyor, webdriver chrome = new Chromedriver
+ * abstract - abstraction farkli
+ * abstrack class da concrete ve abstract method kullanilir ama interface de metodlar sadece abstract olur.
+ * bir sinifi iki classa extend edemiyoruz.
+ *
+ */
 
 }
