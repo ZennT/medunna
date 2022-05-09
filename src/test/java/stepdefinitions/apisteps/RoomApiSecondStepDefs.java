@@ -128,6 +128,10 @@ public class RoomApiSecondStepDefs {
         response = putRequestRoomSecond(generateToken(),ConfigurationReader.getProperty("room_endpoint"), actualRoomData);
         response.then().statusCode(200);
         response.prettyPrint();
+        Assert.assertTrue(actualRoomData.get("price").equals(1000));
+//        Object price = actualRoomData.get("price");
+//        Assert.assertTrue(price.equals(1000));
+//        System.out.println("pass");
     }
 
     @Then("User deletes created room")

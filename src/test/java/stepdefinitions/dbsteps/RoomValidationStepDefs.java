@@ -52,7 +52,7 @@ public class RoomValidationStepDefs {
     @Then("validate that room is landed in db")
     public void validateThatRoomIsLandedInDb() throws SQLException {
         DatabaseUtility.executeQuery("Select id from room");
-        List<Long> allRoomsFromDB = DatabaseUtility.getResult();
+        List<Long> allRoomsFromDB = DatabaseUtility.getRoomResult();
 
         System.out.println(allRoomsFromDB);
 

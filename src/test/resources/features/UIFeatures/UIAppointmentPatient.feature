@@ -1,11 +1,12 @@
 @AppointmentTotal
 Feature: appointments test
 
-
+Background: clicking on make an appointment
+  Given user clicks on make an appointment
 
   @UIAppointment @RegressionTest
   Scenario Outline: test appointments
-    Given user clicks on make an appointment
+#    Given user clicks on make an appointment
     And user provides the appointment name "<firstname>"
     And user provides the appointment lastname "<lastname>"
     And user provides ssn and email "<SSN>" and "<email>"
@@ -33,7 +34,7 @@ Feature: appointments test
 
   @UIAppointment
   Scenario Outline: negative ssn test
-    Given user clicks on make an appointment
+#    Given user clicks on make an appointment
     And user provides invalid ssn as "<ssn>"
     And user verifies the ssn error message
 
@@ -46,7 +47,7 @@ Feature: appointments test
 
   @UIAppointment
   Scenario Outline: negative email test
-    Given user clicks on make an appointment
+#    Given user clicks on make an appointment
     And user provides invalid email as "<email>"
     And user verifies the email error message
 
@@ -58,7 +59,7 @@ Feature: appointments test
 
   @UIAppointment
   Scenario Outline: negative phone number test
-    Given user clicks on make an appointment
+#    Given user clicks on make an appointment
     And user provides invalid phone number as "<phoneNumber>"
     And user verifies the phone number error message
 
@@ -71,7 +72,7 @@ Feature: appointments test
 
   @UIAppointment
   Scenario: blank test
-    Given user clicks on make an appointment
+#    Given user clicks on make an appointment
     And user keeps firstname blank and verifies error message
     And user keeps lastname blank and verifies error message
     And user keeps ssn blank and verifies error message

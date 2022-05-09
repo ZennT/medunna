@@ -202,11 +202,13 @@ public class DatabaseUtility {
     }
 
 
-    public static List<Long> getResult() throws SQLException {
+//    txt dosyasina yazdirmadigimiz zaman bu metod ile butun room id lerini List in icine atiyoruz
+    public static List<Long> getRoomResult() throws SQLException {
         List<Long> allRoomIds = new ArrayList<>();
         while (resultSet.next()){
               allRoomIds.add((long)resultSet.getObject("id"));
         }
+
 
         return allRoomIds;
     }
