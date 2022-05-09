@@ -5,13 +5,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import utilities.DatabaseUtility;
+import utilities.Driver;
+
 import java.sql.SQLException;
 import java.util.List;
-import static utilities.DatabaseUtility.createConnection;
+
+import static utilities.DatabaseUtility.*;
 
 
 public class RoomSecondDBValidationStepDefs {
     List<Long> allRoomsFromDB;
+    List<Long> allRoomsFromDB1;
     @Given("User connects to the database")
     public void userConnectsToTheDatabase() {
         createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
@@ -29,7 +33,7 @@ public class RoomSecondDBValidationStepDefs {
     @And("User validates new room landed on db")
     public void userValidatesNewRoomLandedOnDb() {
         //1. Way
-        Assert.assertTrue(allRoomsFromDB.contains(35703L));
+        Assert.assertTrue(allRoomsFromDB.contains(96624L));
         System.out.println("assertTrue");
 
         //2.Way
@@ -40,7 +44,17 @@ public class RoomSecondDBValidationStepDefs {
     }
 
     @Then("User sends query to delete from  db")
-    public void userSendsQueryToDeleteFromDb() {
+    public void userSendsQueryToDeleteFromDb() throws SQLException {
+//        DatabaseUtility.executeQuery("Select id from room where id 96625");
+        executeQuery("Delete from room where id=96624");
+        Driver.wait(7);
+        DatabaseUtility.executeQuery("Select id from room");
+        allRoomsFromDB1= DatabaseUtility.getResult();
+        System.out.println(allRoomsFromDB1);
+       // Assert.assertFalse("Room number no longer exist",allRoomsFromDB1.contains(96624L));
+        Assert.assertNotEquals(allRoomsFromDB,allRoomsFromDB1);
+        System.out.println("assertFalse");
+
     }
 
 

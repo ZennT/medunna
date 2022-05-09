@@ -1,5 +1,7 @@
 package utilities;
 
+import org.postgresql.util.PSQLException;
+
 import java.sql.*;
 import java.util.*;
 
@@ -21,11 +23,11 @@ public class DatabaseUtility {
         }
     }
 
-    public static void main(String[] args) {
-        createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
-        System.out.println(getColumnData("Select * FROM jhi_user", "first_name"));
-        closeConnection();
-    }
+//    public static void main(String[] args) {
+//        createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
+//        System.out.println(getColumnData("Select * FROM jhi_user", "first_name"));
+//        closeConnection();
+//    }
 
     public static void createConnection(String url, String user, String password) {
         try {
@@ -35,6 +37,7 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
+
     public static void closeConnection() {
         try {
             if (resultSet != null) {
@@ -187,6 +190,22 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
+
+    public static void deleteQuery(String query) throws SQLException {
+        try {
+            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        } catch (PSQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        try {
+            resultSet = statement.executeQuery(query);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
     public static int getRowCount() throws Exception {
         resultSet.last();
         int rowCount = resultSet.getRow();
