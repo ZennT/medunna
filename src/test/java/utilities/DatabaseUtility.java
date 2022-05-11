@@ -194,15 +194,68 @@ public class DatabaseUtility {
     public static void deleteQuery(String query) throws SQLException {
         try {
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            statement.executeUpdate(query);
+            System.out.println("Record successfully deleted");
         } catch (PSQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    public static void executeDelete(String query){
         try {
-            resultSet = statement.executeQuery(query);
-        } catch (SQLException e) {
+            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);;
+            int rowAffacted = statement.executeUpdate(query);
+            if (rowAffacted != 0) {
+                System.out.println("Record deleted successfully!");
+            }else{
+                System.out.println("No Affected Rows!");
+            }
+        } catch (PSQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+    }
+
+    public static void executeDelete2(String query) {
+        try {
+            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+             statement.executeUpdate(query);
+                System.out.println("Record deleted successfully!");
+
+            } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+        }
+    }
+
+    public static int deleteRows(String tableName, Long id) throws SQLException {
+
+        statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);;
+        int rowsDeleted = 0;
+        String sql = "";
+        sql = "select * from " + tableName;
+        ResultSet rs = statement.executeQuery(sql);
+        if (rs.next()) {
+            sql = "delete from  " + tableName+ " where id=" +id;
+            rowsDeleted = statement.executeUpdate(sql);
+            System.out.println("Room number "+id+" deleted successfully.");
+
+        }
+        return rowsDeleted;
+    }
+
+    public static void DeleteRoomRow(Long id) {
+        try {
+
+            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);;
+            statement.executeUpdate("DELETE FROM room WHERE id = " + id + ";");
+
+            System.out.println("Room number "+id+" deleted successfully.");
+        } catch(Exception e) {
+            System.out.println(e);
         }
     }
 

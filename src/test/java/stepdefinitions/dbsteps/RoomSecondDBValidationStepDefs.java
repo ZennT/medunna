@@ -26,15 +26,15 @@ public class RoomSecondDBValidationStepDefs {
     public void userSendsNewRoomQueryToDBAndGetsTheColumnData() throws SQLException {
         DatabaseUtility.executeQuery("Select id from room");
         allRoomsFromDB= DatabaseUtility.getResult();
-        System.out.println(allRoomsFromDB);
+        //System.out.println(allRoomsFromDB);
 
     }
 
     @And("User validates new room landed on db")
     public void userValidatesNewRoomLandedOnDb() {
         //1. Way
-        Assert.assertTrue(allRoomsFromDB.contains(96624L));
-        System.out.println("assertTrue");
+        Assert.assertTrue(allRoomsFromDB.contains(96346L));
+        //System.out.println("assertTrue");
 
         //2.Way
 
@@ -46,16 +46,24 @@ public class RoomSecondDBValidationStepDefs {
     @Then("User sends query to delete from  db")
     public void userSendsQueryToDeleteFromDb() throws SQLException {
 //        DatabaseUtility.executeQuery("Select id from room where id 96625");
-        executeQuery("Delete from room where id=96624");
-        Driver.wait(7);
+        //1.way
+//       executeQuery("Delete from room where id=96624");
+        //2.way
+        //deleteQuery("Delete from room where id=96609");
+        //3.way
+        //DeleteRoomRow(96602L);
+        //4.way
+        //executeDelete("Delete from room where id=96349");
+        //5.way
+       // executeDelete2("Delete from room where id=96348");
+        //6.way
+        deleteRows("room",96346L);
+
         DatabaseUtility.executeQuery("Select id from room");
         allRoomsFromDB1= DatabaseUtility.getResult();
         System.out.println(allRoomsFromDB1);
-       // Assert.assertFalse("Room number no longer exist",allRoomsFromDB1.contains(96624L));
-        Assert.assertNotEquals(allRoomsFromDB,allRoomsFromDB1);
-        System.out.println("assertFalse");
+        Assert.assertFalse(allRoomsFromDB1.contains(96346L));
+        //Assert.assertNotEquals(allRoomsFromDB,allRoomsFromDB1);
 
     }
-
-
 }
