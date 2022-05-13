@@ -11,7 +11,9 @@ import static Hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 
 public class Authentication {
-
+    public static void main(String[] args) {
+        generateToken();
+    }
 
 
     public static String generateToken(){
@@ -39,6 +41,7 @@ public class Authentication {
         return json.getString("id_token");
 
     }
+
 
 
 

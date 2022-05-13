@@ -1,0 +1,20 @@
+RoomCreateUpdateDelete{description='', id=, price=180, roomNumber=2462237, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='add sofabed', id=, price=100, roomNumber=17764, roomType='DAYCARE', status=true}
+RoomCreateUpdateDelete{description='The new patients reservations', id=, price=1101, roomNumber=234405, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=1, roomNumber=401, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='mus', id=, price=111, roomNumber=5649, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=180, roomNumber=2782357, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='free room', id=, price=1, roomNumber=122, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='This is a test room creation by Team93', id=, price=481, roomNumber=7885, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=600, roomNumber=2, roomType='PREMIUM_DELUXE', status=true}
+RoomCreateUpdateDelete{description='null', id=, price=444, roomNumber=5645, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='this is a test room description', id=, price=5000, roomNumber=6881, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=200, roomNumber=236, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=295, roomNumber=235, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=100, roomNumber=6385, roomType='DAYCARE', status=true}
+RoomCreateUpdateDelete{description='fqdfqf', id=, price=260, roomNumber=154786, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=100, roomNumber=96454, roomType='DAYCARE', status=true}
+RoomCreateUpdateDelete{description='', id=, price=180, roomNumber=3646086, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='null', id=, price=399, roomNumber=903, roomType='SUITE', status=true}
+RoomCreateUpdateDelete{description='URGENT PATIENT', id=, price=4444, roomNumber=8499, roomType='TWIN', status=true}
+RoomCreateUpdateDelete{description='', id=, price=180, roomNumber=3661578, roomType='TWIN', status=true}

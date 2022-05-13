@@ -1,0 +1,7 @@
+RoomCreateUpdateDelete{description='this is a test description', id=, price=8067, roomNumber=6592, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=8364, roomNumber=5942, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=8246, roomNumber=5449, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=9106, roomNumber=5824, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=7885, roomNumber=6187, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=8486, roomNumber=5294, roomType='DELUXE', status=true}
+RoomCreateUpdateDelete{description='this is a test description', id=, price=7588, roomNumber=6011, roomType='DELUXE', status=true}

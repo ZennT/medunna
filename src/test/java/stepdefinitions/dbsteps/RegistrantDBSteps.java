@@ -29,6 +29,7 @@ public class RegistrantDBSteps {
     public void user_saves_the_db_records_to_correspondent_files() {
         saveRegistrantData(allDBSSNs);
     }
+
     @Then("user validates DB Registrant data")
     public void user_validates_db_registrant_data() {
         List<String> expectedSSNIDs = new ArrayList<>();
@@ -38,7 +39,6 @@ public class RegistrantDBSteps {
         List<String> actualData = getSSNIDs();//All records
 
         Assert.assertTrue(actualData.containsAll(expectedSSNIDs));
-
 
     }
 

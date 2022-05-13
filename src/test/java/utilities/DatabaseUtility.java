@@ -11,9 +11,12 @@ public class DatabaseUtility {
     private static ResultSet resultSet;
 
     public static void createConnection() {
-        String url = ConfigurationReader.getProperty("database_url");
-        String user = ConfigurationReader.getProperty("database_user");
-        String password = "Techpro_@126";
+//        String url = ConfigurationReader.getProperty("database_url");
+//        String user = ConfigurationReader.getProperty("database_user");
+//        String password = "Techpro_@126";
+        String url = ConfigurationReader.getProperty("db_credentials_url");
+        String user = ConfigurationReader.getProperty("db_username");
+        String password = ConfigurationReader.getProperty("db_password");
 
         try {
             connection = DriverManager.getConnection(url, user, password);
@@ -28,6 +31,26 @@ public class DatabaseUtility {
 //        System.out.println(getColumnData("Select * FROM jhi_user", "first_name"));
 //        closeConnection();
 //    }
+
+    public static Statement getStatement() {
+        return statement;
+    }
+
+    public static void main(String[] args) throws Exception {
+        createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
+//        System.out.println(getColumnData("Select * FROM jhi_user", "id"));
+//        System.out.println(getColumnData2("Select * FROM jhi_user", 1));
+//        System.out.println(getQueryResultMap("Select * FROM jhi_user order by id limit 2"));
+//        System.out.println(getQueryResultMap("Select id FROM jhi_user order by id limit 2"));
+//        System.out.println(getColumnNames("Select * FROM jhi_user"));
+//        System.out.println(getCellValuewithRowsAndCells("Select * FROM jhi_user",8,6));
+//        executeQuery("Select id FROM jhi_user");
+//        System.out.println(getRowCount());
+
+
+        closeConnection();
+
+    }
 
     public static void createConnection(String url, String user, String password) {
         try {
@@ -89,6 +112,27 @@ public class DatabaseUtility {
      * @return returns query result in a list of lists where outer list represents
      *         collection of rows and inner lists represent a single row
      */
+
+
+    /*
+    *
+    * Person
+    * id | firstName| lastName | age | salary
+    * 1   Ahmet         h        10     1000
+    * 2   Mehmet         t        30    1000
+    *
+    *
+    * select * from Person where id = 1;
+    *
+    * [
+        * [1,Ahmet,h,t,10,1000],
+        * [2,Mehmet,t,30,1000]
+    * ]
+    *
+    * 1   Ahmet         h        10     1000
+    *
+    *
+    * */
     public static List<List<Object>> getQueryResultList(String query) {
         executeQuery(query);
         List<List<Object>> rowList = new ArrayList<>();
@@ -127,6 +171,23 @@ public class DatabaseUtility {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        return rowList;
+    }
+
+    public static List<Object> getColumnData2(String query, int column) {
+        executeQuery(query);
+        List<Object> rowList = new ArrayList<>();
+
+        try {
+
+            while (resultSet.next()) {
+                rowList.add(resultSet.getObject(column));
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
         return rowList;
     }
     /**
@@ -176,6 +237,19 @@ public class DatabaseUtility {
         }
         return columns;
     }
+
+
+//    txt dosyasina yazdirmadigimiz zaman bu metod ile butun room id lerini List in icine atiyoruz
+    public static List<Long> getRoomResult() throws SQLException {
+        List<Long> allRoomIds = new ArrayList<>();
+        while (resultSet.next()){
+              allRoomIds.add((long)resultSet.getObject("id"));
+        }
+
+
+        return allRoomIds;
+    }
+
     public static void executeQuery(String query) {
         try {
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
@@ -264,8 +338,7 @@ public class DatabaseUtility {
         int rowCount = resultSet.getRow();
         return rowCount;
     }
-    public static void insertCountry(String  countryName){
-    }
+
     public static void executeInsertion(String query) {
         try {
             statement = connection.createStatement();
@@ -280,6 +353,7 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
+
     public static int getMaxCountryId (String query,String column){
         int max = 0;
         List<Object> allIds = getColumnData(query, column);
@@ -301,6 +375,27 @@ public class DatabaseUtility {
     public static Object getCellValuewithRowsAndCells(String query,int row,int cell) {
         return getQueryResultList(query).get(row).get(cell);
     }
+
+//    public static int getMaxCountryId (String query,String column){
+//        int max = 0;
+//        List<Object> allIds = getColumnData(query, column);
+//        for (int i=0; i<allIds.size();i++){
+//            int num = Integer.parseInt(allIds.get(i).toString().trim());
+//            if(max <= num)
+//                max=num;
+//        }
+//        return max;
+//    }
+//    public static Object getCellValuewithRowsAndCells(String query,int row,int cell) {
+//
+//        return getQueryResultList(query).get(row).get(cell);
+//    }
+
+//    public static Object getCellValuewithRowsAndCells(String query,int row,int cell){
+//
+//    }
+
+
     public static List<Object> getRowListWithParam(String query,int row) {
         return getQueryResultList(query).get(row);
     }

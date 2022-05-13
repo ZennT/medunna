@@ -1,7 +1,8 @@
 Feature: Appointment create read update delete
-  @Appointments_validation
-  Scenario: appointment create
+  @AppointmentApi2
+  Scenario: Appointment create
     Given user sets base url for appointment creation
-    And user creates appointment data
-    And user sends post request for appointment creation
-    Then user validates appointment
+    When  user creates appointment data
+    And   user sends post request for appointment creation
+    Then  user validates appointment
+

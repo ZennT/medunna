@@ -4,4 +4,3 @@ Feature:  Room database validation
     And user sends new room query to DB and gets the column data
     And User validates new room landed on db
     Then User sends query to delete from  db
-
