@@ -26,6 +26,7 @@ public class Hooks {
     public void setup(){
 
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+//        spec = new RequestSpecBuilder().setBaseUri("https://medunna.com").build();
 
 
     }
@@ -88,6 +89,40 @@ public class Hooks {
 
 
     }
+
+    @Before( value = "@AppointmentApi")
+    public void setupAppointment(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+    @Before( value = "@RoomApi")
+    public void setupRoom(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+    @Before( value = "@AppointmentApi2")
+    public void setupAppointmentAPI(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+    @Before( value = "@RoomApiSecond")
+    public void setupRoomApiSecond(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
+
+
 
 
 

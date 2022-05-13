@@ -1,9 +1,7 @@
 Feature: DB Registrants tests
 
-
-
-
   Background: db connection set up
+#    background means "before scenario" runs before every scenario
     Given user creates a connection with DB using "jdbc:postgresql://medunna.com:5432/medunna_db" and "medunnadb_user" , "Medunnadb_@129"
 
   @DBTest
@@ -15,3 +13,5 @@ Feature: DB Registrants tests
     Examples: test data
       |query|columnName|
       |Select * from jhi_user|ssn|
+
+

@@ -3,11 +3,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 
-public class RoomCreateUpdateDelete {
-/*
-{
+public class RoomApiRequest {
+
+    /*
+    {
   "createdBy": "string",
-  "createdDate": "2022-03-25T07:54:08.787Z",
+  "createdDate": "2022-04-04T21:17:54.334Z",
   "description": "string",
   "id": 0,
   "price": 0,
@@ -15,23 +16,24 @@ public class RoomCreateUpdateDelete {
   "roomType": "TWIN",
   "status": true
 }
+     */
 
- */
     private String createdBy;
-    //private String createdDate;
     private String description;
-    private int price;
+    private int id;
+    private double price;
     private int roomNumber;
     private String roomType;
     private boolean status;
-    private int id;
 
-    public RoomCreateUpdateDelete() {
+
+    public RoomApiRequest() {
     }
 
-    public RoomCreateUpdateDelete(String createdBy, String description, int price, int roomNumber, String roomType, boolean status) {
+    public RoomApiRequest(String createdBy, String description, int id, double price, int roomNumber, String roomType, boolean status) {
         this.createdBy = createdBy;
         this.description = description;
+//        this.id = id;
         this.price = price;
         this.roomNumber = roomNumber;
         this.roomType = roomType;
@@ -46,14 +48,6 @@ public class RoomCreateUpdateDelete {
         this.createdBy = createdBy;
     }
 
-//    public String getCreatedDate() {
-//        return createdDate;
-//    }
-//
-//    public void setCreatedDate(String createdDate) {
-//        this.createdDate = createdDate;
-//    }
-
     public String getDescription() {
         return description;
     }
@@ -62,11 +56,19 @@ public class RoomCreateUpdateDelete {
         this.description = description;
     }
 
-    public int getPrice() {
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
+
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -94,24 +96,16 @@ public class RoomCreateUpdateDelete {
         this.status = status;
     }
 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
-        return "RoomCreateUpdateDelete{" +
-                "description='" + description + '\'' +
-                ", id=" +
+        return "RoomApi{" +
+                "createdBy='" + createdBy + '\'' +
+                ", description='" + description + '\'' +
+//                ", id=" + id +
                 ", price=" + price +
                 ", roomNumber=" + roomNumber +
                 ", roomType='" + roomType + '\'' +
-                ", status=" + status +
+                ", statusstatus=" + status +
                 '}';
     }
 }
