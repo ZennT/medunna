@@ -21,16 +21,16 @@ public class RoomSecondDBValidationStepDefs {
 
     @Given("User connects to the database")
     public void userConnectsToTheDatabase() {
-//      createConnection();
-        createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
+      createConnection();
+//        createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
     }
 
 
     @And("user sends new room query to DB and gets the column data")
     public void userSendsNewRoomQueryToDBAndGetsTheColumnData() throws SQLException {
         executeQuery("Select id from room");
-        System.out.println(allRoomsFromDB);
         allRoomsFromDB = DatabaseUtility.getRoomResult();
+        System.out.println(allRoomsFromDB);
 
     }
 
@@ -40,7 +40,7 @@ public class RoomSecondDBValidationStepDefs {
 
 
 //1.way
-        Assert.assertTrue(allRoomsFromDB.contains(83893));
+        Assert.assertTrue(allRoomsFromDB.contains(83893L));
         System.out.println("assertTrue");
 
 //        2.way

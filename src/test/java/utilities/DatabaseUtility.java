@@ -27,10 +27,24 @@ public class DatabaseUtility {
         }
     }
 
-    public static void main(String[] args) {
+    public static Statement getStatement() {
+        return statement;
+    }
+
+    public static void main(String[] args) throws Exception {
         createConnection("jdbc:postgresql://medunna.com:5432/medunna_db","medunnadb_user" , "Medunnadb_@129");
-        System.out.println(getColumnData("Select * FROM jhi_user", "first_name"));
+//        System.out.println(getColumnData("Select * FROM jhi_user", "id"));
+//        System.out.println(getColumnData2("Select * FROM jhi_user", 1));
+//        System.out.println(getQueryResultMap("Select * FROM jhi_user order by id limit 2"));
+//        System.out.println(getQueryResultMap("Select id FROM jhi_user order by id limit 2"));
+//        System.out.println(getColumnNames("Select * FROM jhi_user"));
+//        System.out.println(getCellValuewithRowsAndCells("Select * FROM jhi_user",8,6));
+//        executeQuery("Select id FROM jhi_user");
+//        System.out.println(getRowCount());
+
+
         closeConnection();
+
     }
 
     public static void createConnection(String url, String user, String password) {
@@ -153,6 +167,23 @@ public class DatabaseUtility {
         }
         return rowList;
     }
+
+    public static List<Object> getColumnData2(String query, int column) {
+        executeQuery(query);
+        List<Object> rowList = new ArrayList<>();
+
+        try {
+
+            while (resultSet.next()) {
+                rowList.add(resultSet.getObject(column));
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return rowList;
+    }
     /**
      *
      * @param query
@@ -232,8 +263,7 @@ public class DatabaseUtility {
         int rowCount = resultSet.getRow();
         return rowCount;
     }
-    public static void insertCountry(String  countryName){
-    }
+
     public static void executeInsertion(String query) {
         try {
             statement = connection.createStatement();
@@ -248,19 +278,25 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
     }
-    public static int getMaxCountryId (String query,String column){
-        int max = 0;
-        List<Object> allIds = getColumnData(query, column);
-        for (int i=0; i<allIds.size();i++){
-            int num = Integer.parseInt(allIds.get(i).toString().trim());
-            if(max <= num)
-                max=num;
-        }
-        return max;
-    }
-    public static Object getCellValuewithRowsAndCells(String query,int row,int cell) {
-        return getQueryResultList(query).get(row).get(cell);
-    }
+//    public static int getMaxCountryId (String query,String column){
+//        int max = 0;
+//        List<Object> allIds = getColumnData(query, column);
+//        for (int i=0; i<allIds.size();i++){
+//            int num = Integer.parseInt(allIds.get(i).toString().trim());
+//            if(max <= num)
+//                max=num;
+//        }
+//        return max;
+//    }
+//    public static Object getCellValuewithRowsAndCells(String query,int row,int cell) {
+//
+//        return getQueryResultList(query).get(row).get(cell);
+//    }
+
+//    public static Object getCellValuewithRowsAndCells(String query,int row,int cell){
+//
+//    }
+
     public static List<Object> getRowListWithParam(String query,int row) {
         return getQueryResultList(query).get(row);
     }

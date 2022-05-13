@@ -50,8 +50,10 @@ public class RoomValidationStepDefs {
     }
 
     @Then("validate that room is landed in db")
-    public void validateThatRoomIsLandedInDb() throws SQLException {
+    public void validateThatRoomIsLandedInDb() throws Exception {
+//        DatabaseUtility.getColumnData("Select id from room","id");
         DatabaseUtility.executeQuery("Select id from room");
+        DatabaseUtility.getRowCount();
         List<Long> allRoomsFromDB = DatabaseUtility.getRoomResult();
 
         System.out.println(allRoomsFromDB);
