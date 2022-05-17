@@ -1,0 +1,15 @@
+Appointment{firstname='Ummu', lastname='Ummu', ssn='234-56-8907', email='newhasta@mail.com', phoneNumber='456-890-8990', date='2022-04-01'}
+Appointment{firstname='Ummu', lastname='Ummu', ssn='234-56-8907', email='newhasta@mail.com', phoneNumber='456-890-8990', date='2022-04-01'}
+Appointment{firstname='Ummu', lastname='Ummu', ssn='234-56-8907', email='newhasta@mail.com', phoneNumber='456-890-8990', date='2022-04-01'}
+Appointment{firstname='Ummu', lastname='Ummu', ssn='234-56-8990', email='newhast23@mail.com', phoneNumber='456-890-8990', date='2022-04-01'}
+Appointment{firstname='Ummu', lastname='Ummu', ssn='234-56-7890', email='newhast20@mail.com', phoneNumber='456-890-8990', date='2022-04-01'}
+Appointment{firstname='Ummu', lastname='Ummu', ssn='234-56-7890', email='newhast20@mail.com', phoneNumber='456-890-8990', date='2022-04-01'}
+Appointment{firstname='Mindi', lastname='Yundt', ssn='572-09-8544', email='danika.ullrich@yahoo.com', phoneNumber='456-890-8990', date='2022-04-01'}
+Appointment{firstname='patient2', lastname='patient2', ssn='345-34-2323', email='patient3@qa.team', phoneNumber='2059002008', date='2022-04-01'}
+Appointment{firstname='Cori', lastname='Beer', ssn='888-88-8766', email='patient3@qa.team', phoneNumber='1111111111', date='2022-05-01'}
+Appointment{firstname='Cori', lastname='Beer', ssn='888-88-8766', email='patient3@qa.team', phoneNumber='1111111111', date='2022-05-01'}
+Appointment{firstname='Cori', lastname='Beer', ssn='888-88-8766', email='patient3@qa.team', phoneNumber='1111111111', date='2022-05-01'}
+Appointment{firstname='Cori', lastname='Beer', ssn='888-88-8766', email='patient3@qa.team', phoneNumber='1111111111', date='2022-05-01'}
+Appointment{firstname='Cori', lastname='Beer', ssn='888-88-8766', email='patient3@qa.team', phoneNumber='1111111111', date='2022-05-01'}
+Appointment{firstname='Cori', lastname='Beer', ssn='888-88-8766', email='patient3@qa.team', phoneNumber='1111111111', date='2022-06-01'}
+Appointment{firstname='Cori', lastname='Beer', ssn='888-88-8766', email='patient3@qa.team', phoneNumber='1111111111', date='2022-06-01'}

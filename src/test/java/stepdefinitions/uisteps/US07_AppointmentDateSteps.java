@@ -3,6 +3,7 @@ package stepdefinitions.uisteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import pages.US07_AppointmentDatePage;
@@ -51,6 +52,7 @@ public class US07_AppointmentDateSteps {
 
         Assert.assertTrue(errorMessage.contains("Appointment date"));
     }
+
 
 
 }

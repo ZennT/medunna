@@ -1,6 +1,5 @@
 @RoomApiSecond
 Feature: Room api study
-
   Scenario: Room post
    Given User sets base url for new room creation
     When User sets the expected data for a new room

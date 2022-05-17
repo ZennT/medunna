@@ -56,6 +56,7 @@ public class Hooks {
 
     }
 
+
     @Before(value = "@UIAppointment")
     public void navigateToAppointmentPage(){
 
@@ -82,6 +83,12 @@ public class Hooks {
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
     }
 
+
+    @Before( value = "@ApointmentApi")
+    public void postappetup(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+    }
+
     @Before( value = "@US_15_Api_test")
     public void setuppatient(){
 
@@ -89,6 +96,10 @@ public class Hooks {
 
 
     }
+    @Before( value = "@RoomApi")
+    public void setRoom(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
 
     @Before( value = "@AppointmentApi")
     public void setupAppointment(){
@@ -125,7 +136,16 @@ public class Hooks {
 
 
 
+    }
 
+
+    @Before( value = "@RoomApiSecond")
+    public void setSecondRoom(){
+
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+
+
+    }
 
 
 

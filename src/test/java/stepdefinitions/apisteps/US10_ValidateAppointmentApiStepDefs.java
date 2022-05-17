@@ -1,6 +1,8 @@
 package stepdefinitions.apisteps;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.http.ContentType;
 
@@ -69,6 +71,7 @@ public class US10_ValidateAppointmentApiStepDefs {
 //        expectedData=new DoctorAppointment("38181","2022-04-23T00:00:00Z","2022-04-23T01:00:00Z","COMPLETED");
 //
     }
+
 
 
 }

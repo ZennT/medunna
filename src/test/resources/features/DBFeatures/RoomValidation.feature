@@ -1,5 +1,5 @@
-Feature: Room validation
 
+Feature:Room validation
   @RoomApi
   Scenario: Validate created room
     Given create room by using post request

@@ -1,6 +1,5 @@
 package pojos;
 
-//import lombok.*;
 
 import lombok.*;
 
@@ -12,6 +11,7 @@ import lombok.*;
 //@NoArgsConstructor
 //@ToString
 
+
 public class RoomApiResponse {
     private String createdDate;
     private String createdBy;
@@ -21,4 +21,5 @@ public class RoomApiResponse {
     private int roomNumber;
     private String roomType;
     private boolean status;
+
 }

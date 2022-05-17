@@ -18,5 +18,3 @@ Feature: TestItems Api functionalities
     And user deserializes test items data to Java
     And user saves the test items data to correspondent file
     Then user validates expected test item records with Api
-
-

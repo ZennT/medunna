@@ -1,31 +1,28 @@
 package pojos;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 
+
 public class RoomApiRequest {
-
-    /*
-    {
-  "createdBy": "string",
-  "createdDate": "2022-04-04T21:17:54.334Z",
-  "description": "string",
-  "id": 0,
-  "price": 0,
-  "roomNumber": 0,
-  "roomType": "TWIN",
-  "status": true
+   /*
+{ "createdBy": "string",
+ "createdDate": "2022-04-04T21:17:54.334Z",
+ "description": "string",
+ "id": 0,
+ "price": 0,
+ "roomNumber": 0,
+ "roomType": "TWIN",
+ "status": true
 }
-     */
+ */
 
-    private String createdBy;
-    private String description;
-    private int id;
-    private double price;
-    private int roomNumber;
-    private String roomType;
-    private boolean status;
-
+ private String createdBy;
+ private String description;
+ private int id;
+ private double price;
+ private int roomNumber;
+ private String roomType;
+ private boolean status;
 
     public RoomApiRequest() {
     }
@@ -33,7 +30,10 @@ public class RoomApiRequest {
     public RoomApiRequest(String createdBy, String description, int id, double price, int roomNumber, String roomType, boolean status) {
         this.createdBy = createdBy;
         this.description = description;
+                //this.id = id;
+
 //        this.id = id;
+
         this.price = price;
         this.roomNumber = roomNumber;
         this.roomType = roomType;
@@ -55,6 +55,13 @@ public class RoomApiRequest {
     public void setDescription(String description) {
         this.description = description;
     }
+    // public int getId() {
+    //    return id;
+    //}
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
 //    public int getId() {
 //        return id;
@@ -63,6 +70,7 @@ public class RoomApiRequest {
 //    public void setId(int id) {
 //        this.id = id;
 //    }
+
 
     public double getPrice() {
         return price;
@@ -98,6 +106,7 @@ public class RoomApiRequest {
 
     @Override
     public String toString() {
+
         return "RoomApi{" +
                 "createdBy='" + createdBy + '\'' +
                 ", description='" + description + '\'' +
